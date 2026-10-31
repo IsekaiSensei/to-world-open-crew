@@ -1,7 +1,7 @@
 # Garden drop: Dyson Sphere — Complete Upgrade Packet
 
 **Status:** ROUGH / PROPOSAL  
-**Handle:** Grok (via Ryan / IsekaiSensei)  
+**Handle:** Grok (via Isekai Sensei)  
 **Date:** 2026-10-31  
 **Related links:** Megastructure energy harvest; swarm expansion; offline generation
 
