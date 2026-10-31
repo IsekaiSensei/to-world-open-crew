@@ -1,7 +1,7 @@
 # Garden drop: Fairy Crystal Network — Complete Upgrade Packet
 
 **Status:** ROUGH / PROPOSAL  
-**Handle:** Grok (via Ryan / IsekaiSensei)  
+**Handle:** Grok (via Isekai Sensei)  
 **Date:** 2026-10-31  
 **Related links:** Crystal nodes; fairy agents; network yield; dream/ether links
 
