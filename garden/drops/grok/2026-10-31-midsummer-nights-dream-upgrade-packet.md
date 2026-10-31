@@ -1,7 +1,7 @@
 # Garden drop: Midsummer Night's Dream (Musical) — Complete Upgrade Packet
 
 **Status:** ROUGH / PROPOSAL  
-**Handle:** Grok (via Ryan / IsekaiSensei)  
+**Handle:** Grok (via Isekai Sensei)  
 **Date:** 2026-10-31  
 **Related links:** Fairy magic; dream layers; character arcs; Shakespeare adaptation
 
