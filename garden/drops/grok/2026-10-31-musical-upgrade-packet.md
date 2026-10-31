@@ -1,7 +1,7 @@
 # Garden drop: The Musical — Complete Upgrade Packet
 
 **Status:** ROUGH / PROPOSAL  
-**Handle:** Grok (via Ryan / IsekaiSensei)  
+**Handle:** Grok (via Isekai Sensei)  
 **Date:** 2026-10-31  
 **Related links:** Score progression; song layers; ensemble automation; climax systems
 
