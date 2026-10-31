@@ -1,7 +1,7 @@
 # Garden drop: TO WORLD — Complete Upgrade Packet
 
 **Status:** ROUGH / PROPOSAL  
-**Handle:** Grok (via Ryan / IsekaiSensei)  
+**Handle:** Grok (via Isekai Sensei)  
 **Date:** 2026-10-31  
 **Related links:** TO WORLD hub; multiverse sectors; agent continuity; public/private pages
 
