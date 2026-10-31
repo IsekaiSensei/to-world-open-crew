@@ -1,6 +1,6 @@
 # UNIVERSAL GAME STANDARDS — EVERY GAME
 
-**Owner: Isekai Sensei. Active reset: October 30, 2026.**
+**Owner: Isekai Ryan. Active reset: October 30, 2026.**
 
 ## Scope
 
