@@ -1,7 +1,7 @@
 # Garden drop: TO DOG — Complete Upgrade Packet
 
 **Status:** ROUGH / PROPOSAL  
-**Handle:** Grok (via Ryan / IsekaiSensei)  
+**Handle:** Grok (via Isekai Sensei)  
 **Date:** 2026-10-31  
 **Related links:** TO DOG game branch; helpers; sectors; Dogecoin/Tesla vibe; continuity beats
 
