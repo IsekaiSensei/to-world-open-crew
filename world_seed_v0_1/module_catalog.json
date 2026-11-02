@@ -1,0 +1,63 @@
+{
+  "catalog_version": "0.1.0",
+  "status": "candidate-data-prototype",
+  "coordinate_system": "right_handed_xyz_metres_y_up",
+  "grid_pitch_m": 1.0,
+  "port_channels": ["structure", "power", "data", "fluid", "ether"],
+  "port_lock_families": ["face_clamp_v1", "node_socket_v1", "axle_v1", "ring_v1"],
+  "materials": {
+    "gold_lattice": {"visual": "gold-plated structural lattice", "conductivity": "proposed", "structure_rating": null},
+    "nebula_crystal": {"visual": "translucent blue-violet stellar crystal", "thermal_rating": null},
+    "clear_crystal": {"visual": "transparent crystal", "thermal_rating": null},
+    "prism_crystal": {"visual": "multispectral crystalline infill", "thermal_rating": null},
+    "silicone_polymer": {"visual": "smooth non-organic synthetic polymer", "thermal_rating": null},
+    "silver_alloy": {"visual": "silver engineered alloy", "thermal_rating": null}
+  },
+  "templates": {
+    "geom:cube_frame": {
+      "geometry": {"primitive": "cube_open_frame", "size_m": [1,1,1]},
+      "intrinsic_capabilities": ["structure", "frame"],
+      "ports": {
+        "x+": {"point": [0.5,0,0], "normal": [1,0,0], "lock": "face_clamp_v1", "channels": ["structure","power","data","ether"]},
+        "x-": {"point": [-0.5,0,0], "normal": [-1,0,0], "lock": "face_clamp_v1", "channels": ["structure","power","data","ether"]},
+        "y+": {"point": [0,0.5,0], "normal": [0,1,0], "lock": "face_clamp_v1", "channels": ["structure","power","data","ether"]},
+        "y-": {"point": [0,-0.5,0], "normal": [0,-1,0], "lock": "face_clamp_v1", "channels": ["structure","power","data","ether"]},
+        "z+": {"point": [0,0,0.5], "normal": [0,0,1], "lock": "face_clamp_v1", "channels": ["structure","power","data","ether"]},
+        "z-": {"point": [0,0,-0.5], "normal": [0,0,-1], "lock": "face_clamp_v1", "channels": ["structure","power","data","ether"]}
+      }
+    },
+    "geom:panel_square": {
+      "geometry": {"primitive": "square_tile", "size_m": [1,0.05,1]},
+      "intrinsic_capabilities": ["infill"],
+      "ports": {"mount": {"point": [0,0,0], "normal": [0,-1,0], "lock": "face_clamp_v1", "channels": ["structure","power","data"]}}
+    },
+    "geom:beam_1m": {
+      "geometry": {"primitive": "rod", "size_m": [0.1,1,0.1]},
+      "intrinsic_capabilities": ["structure"],
+      "ports": {
+        "top": {"point": [0,0.5,0], "normal": [0,1,0], "lock": "node_socket_v1", "channels": ["structure","power","data"]},
+        "bottom": {"point": [0,-0.5,0], "normal": [0,-1,0], "lock": "node_socket_v1", "channels": ["structure","power","data"]}
+      }
+    },
+    "geom:hub_6way": {
+      "geometry": {"primitive": "joint_sphere", "diameter_m": 0.2},
+      "intrinsic_capabilities": ["structure", "distribution"],
+      "ports": {
+        "x+": {"point": [0.1,0,0], "normal": [1,0,0], "lock": "node_socket_v1", "channels": ["structure","power","data"]},
+        "x-": {"point": [-0.1,0,0], "normal": [-1,0,0], "lock": "node_socket_v1", "channels": ["structure","power","data"]},
+        "y+": {"point": [0,0.1,0], "normal": [0,1,0], "lock": "node_socket_v1", "channels": ["structure","power","data"]},
+        "y-": {"point": [0,-0.1,0], "normal": [0,-1,0], "lock": "node_socket_v1", "channels": ["structure","power","data"]},
+        "z+": {"point": [0,0,0.1], "normal": [0,0,1], "lock": "node_socket_v1", "channels": ["structure","power","data"]},
+        "z-": {"point": [0,0,-0.1], "normal": [0,0,-1], "lock": "node_socket_v1", "channels": ["structure","power","data"]}
+      }
+    },
+    "geom:hinge": {"geometry": {"primitive": "pivot"}, "intrinsic_capabilities": ["articulated_joint"], "ports": {}},
+    "geom:ring_segment": {"geometry": {"primitive": "arc"}, "intrinsic_capabilities": ["structure", "ring_relay_candidate"], "ports": {}},
+    "device:ether_relay": {"geometry": {"primitive": "relay_core"}, "intrinsic_capabilities": ["ether_transport_when_powered"], "ports": {}},
+    "device:servo": {"geometry": {"primitive": "actuator"}, "intrinsic_capabilities": ["actuation_when_powered"], "ports": {}},
+    "device:ion_drive": {"geometry": {"primitive": "propulsion_unit"}, "intrinsic_capabilities": ["thrust_when_powered"], "ports": {}},
+    "device:scanner": {"geometry": {"primitive": "sensor"}, "intrinsic_capabilities": ["scan_topology"], "ports": {}}
+  },
+  "additional_geometries_proposed": ["tetra_frame", "octa_frame", "dodeca_frame", "icosa_frame", "sphere_dome", "arch", "bridge_span", "window", "roof", "floor", "wall", "door"],
+  "face_properties": {"allowed_states": ["neutral", "thermal", "electrical", "optical", "magnetic", "reflective", "solar", "sealed"], "default": "neutral"}
+}
