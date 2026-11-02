@@ -1,0 +1,17 @@
+{
+  "schema_version": "0.1.0",
+  "seed_id": "worldseed:bridge-demo-001",
+  "source": {"kind": "authored_prototype", "reference": "LATTICE CASTLE + LATTICE BLOCK LIBRARY", "measured_from_source": false},
+  "status": "prototype",
+  "instances": [
+    {"id": "cube-a", "template": "geom:cube_frame", "pose": {"position": [0,0,0], "yaw_deg": 0}, "material": "gold_lattice", "faces": {"y+": "sealed"}, "state": {"active": true}, "world_tags": ["ground_anchor", "walkable_surface"]},
+    {"id": "cube-b", "template": "geom:cube_frame", "pose": {"position": [1,0,0], "yaw_deg": 0}, "material": "gold_lattice", "faces": {"y+": "sealed"}, "state": {"active": true}, "world_tags": ["walkable_surface"]},
+    {"id": "cube-c", "template": "geom:cube_frame", "pose": {"position": [2,0,0], "yaw_deg": 0}, "material": "gold_lattice", "faces": {"y+": "sealed"}, "state": {"active": true}, "world_tags": ["ground_anchor", "walkable_surface"]}
+  ],
+  "connections": [
+    {"a": ["cube-a", "x+"], "b": ["cube-b", "x-"], "channels": ["structure", "data"]},
+    {"a": ["cube-b", "x+"], "b": ["cube-c", "x-"], "channels": ["structure", "power"]}
+  ],
+  "presentation": {"preferred_skin": "gold_lattice_and_blue_crystal", "quality": "device_auto"},
+  "galactic_ether_relay": {"destination": null, "status": "dormant"}
+}
