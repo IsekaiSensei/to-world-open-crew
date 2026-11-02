@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/IsekaiSensei/to-world-open-crew/tree/main/world_seed_v0_1/world_seed.schema.json",
+  "title": "TO WORLD construction world-seed assembly v0.1 (does not replace existing universal inventory schema)",
+  "type": "object", "additionalProperties": true,
+  "required": ["schema_version", "seed_id", "status", "instances", "connections"],
+  "properties": {
+    "schema_version": {"const": "0.1.0"},
+    "seed_id": {"type": "string", "minLength": 1},
+    "status": {"enum": ["prototype", "complete", "incomplete"]},
+    "source": {"type": "object"},
+    "claimed_source_module_count": {"type": "integer", "minimum": 0},
+    "source_module_slots": {"type": "array", "items": {"type": "object"}},
+    "instances": {"type": "array", "items": {"type": "object", "required": ["id", "template", "pose", "material"], "properties": {"id": {"type": "string", "minLength": 1}, "template": {"type": "string", "minLength": 1}, "pose": {"type": "object", "required": ["position", "yaw_deg"], "properties": {"position": {"type": "array", "items": {"type": "number"}, "minItems": 3, "maxItems": 3}, "yaw_deg": {"enum": [0,90,180,270]} }}, "material": {"type": "string"}, "faces": {"type": "object", "additionalProperties": {"type": "string"}}, "state": {"type": "object"}, "world_tags": {"type": "array", "items": {"type": "string"}} }}},
+    "connections": {"type": "array", "items": {"type": "object", "required": ["a", "b", "channels"], "properties": {"a": {"type": "array", "items": {"type": "string"}, "minItems": 2, "maxItems": 2}, "b": {"type": "array", "items": {"type": "string"}, "minItems": 2, "maxItems": 2}, "channels": {"type": "array", "uniqueItems": true, "items": {"enum": ["structure", "power", "data", "fluid", "ether"]}} }}}
+  }
+}

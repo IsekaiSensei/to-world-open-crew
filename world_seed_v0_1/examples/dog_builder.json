@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.1.0",
+  "builder_id": "to-dog:seed-engine",
+  "role": "autonomous_fabricator",
+  "capabilities": [
+    "scan_geometric_DNA",
+    "resolve_connection_graph",
+    "replicate_blueprint",
+    "build_from_graph",
+    "reconfigure_assembly",
+    "relay_transfer"
+  ],
+  "source_material_model": "fictional_ether_synthesis",
+  "build_requirement": {
+    "must_have_scanned_blueprint": true,
+    "required_backpack_components": [],
+    "consume_inventory": false,
+    "reacquire_parts": false
+  },
+  "limitations": [
+    "No physically validated production hardware",
+    "No fabrication animation/IK or energy simulation yet"
+  ],
+  "provenance": "TO DOG seed-engine canon interpreted into non-inventory-gated runtime"
+}
