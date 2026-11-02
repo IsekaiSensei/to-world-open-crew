@@ -1,0 +1,332 @@
+{
+  "schema_version": "0.1.0",
+  "seed_id": "worldseed:nms-corvette-source-unresolved",
+  "status": "incomplete",
+  "source": {
+    "kind": "original_no_mans_sky_ship",
+    "source_frame_drive_id": "1QvlR7ykoCP051_-T9pDF3HOOwi48Sbr0",
+    "walkthrough_drive_id": "1fU40Qwn-HOSfK58wMw8Hjt2_YRVZSRzp",
+    "reference_library": "TO WORLD/JPEG/NMS_Corvette_Exterior_2026-11-01",
+    "measured_from_source": false,
+    "note": "Do not substitute visually similar concept ships; source placements are not recovered."
+  },
+  "claimed_source_module_count": 38,
+  "source_module_slots": [
+    {
+      "slot_id": "nms-source-01",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-02",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-03",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-04",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-05",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-06",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-07",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-08",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-09",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-10",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-11",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-12",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-13",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-14",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-15",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-16",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-17",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-18",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-19",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-20",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-21",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-22",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-23",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-24",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-25",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-26",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-27",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-28",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-29",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-30",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-31",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-32",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-33",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-34",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-35",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-36",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-37",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    },
+    {
+      "slot_id": "nms-source-38",
+      "source_part_id": null,
+      "template": null,
+      "pose": null,
+      "ports": null,
+      "verification": "unresolved"
+    }
+  ],
+  "instances": [],
+  "connections": [],
+  "upgrade_policy": {
+    "copy_on_modify": true,
+    "preserve_source_blueprint": true,
+    "permit_new_modules": true,
+    "requires_inventory": false
+  },
+  "presentation": {
+    "preferred_skin": "original_ship_reference",
+    "quality": "device_auto"
+  }
+}
