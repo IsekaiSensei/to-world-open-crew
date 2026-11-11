@@ -1,6 +1,6 @@
 # TO WORLD — Universal Construction DNA / World Seed v0.1
 
-**Status:** runnable data prototype, not a finished Godot game or physically certified construction system. Owner's construction grammar: Geometry → Connection → Material → Function → Assembly → Transformation.
+**Status:** runnable data prototype, not a finished Godot game or physically certified construction system. The newer owner-selected [Saturn Astra modular cockpit world seed](../design/SATURN_ASTRA_MODULAR_COCKPIT_WORLD_SEED_2026-11-10.md) is a separate design target; this construction prototype does not yet implement it. Owner's construction grammar: Geometry → Connection → Material → Function → Assembly → Transformation.
 
 **The cube does not know it is a spaceship.** Its definition is context-independent. Assembly behavior follows from validated neighbors, compatible ports, active devices, connectivity, state and world context.
 
