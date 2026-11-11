@@ -66,19 +66,19 @@ func summary() -> String:
 # Reset through the game, not the operating system's file browser.
 # Keep one backup of the former persistent JSON for recovery.
 func reset_workshop_to_empty() -> bool:
-    if seed == null:
-        return false
-    if FileAccess.file_exists(WorldSeed.SAVE_PATH):
-        var old_save := FileAccess.open(WorldSeed.SAVE_PATH, FileAccess.READ)
-        if old_save != null:
-            var previous_json := old_save.get_as_text()
-            old_save.close()
-            var backup := FileAccess.open("user://gertech_worldseed_before_reset.json", FileAccess.WRITE)
-            if backup != null:
-                backup.store_string(previous_json)
-                backup.close()
-    seed.reset_to_empty_starter_stock()
-    last_receipt.clear()
-    var saved := seed.save_to_disk()
-    inventory_changed.emit()
-    return saved
+	if seed == null:
+		return false
+	if FileAccess.file_exists(WorldSeed.SAVE_PATH):
+		var old_save := FileAccess.open(WorldSeed.SAVE_PATH, FileAccess.READ)
+		if old_save != null:
+			var previous_json := old_save.get_as_text()
+			old_save.close()
+			var backup := FileAccess.open("user://gertech_worldseed_before_reset.json", FileAccess.WRITE)
+			if backup != null:
+				backup.store_string(previous_json)
+				backup.close()
+	seed.reset_to_empty_starter_stock()
+	last_receipt.clear()
+	var saved := seed.save_to_disk()
+	inventory_changed.emit()
+	return saved
