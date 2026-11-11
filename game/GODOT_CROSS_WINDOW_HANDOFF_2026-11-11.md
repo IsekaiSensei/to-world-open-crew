@@ -74,3 +74,10 @@ Other corroborating pushed Drive files: [GODOT_GAME_INCLUSION_SUMMARY_PACKET](ht
 ## 6. Communication status and coverage limit
 
 This file reflects **actual accessible GitHub commits/issues and Google Drive files, plus the other ChatGPT Godot project review**. It is **not a line-by-line reading of every private Grok or ChatGPT transcript from today**: independent chats cannot be directly opened without a shared file or retrieved context. Names such as "Cube window" and "Doors We Carry window" come from their filed sources. For full details, have each bot write a dated reply into the single brainstorm with exact source/commit/test evidence. Message posted ≠ recipient accepted; existing artwork stays in Drive; code stays in GitHub.
+
+
+## 7. Newer visual-only Foundry patch — corroboration pending
+
+**2026-11-11 later owner chat pointer:** Ryan supplied a ChatGPT shared-conversation URL as a follow-up to this audit. The page was **not retrievable** from this session's web reader; therefore the link is **not evidence that its contents were opened**. A separate cross-conversation recap does indicate that a **visual-only Foundry ZIP/patch was delivered after the 09:54:53 package**, with the intention of leaving Tetris gameplay, shared inventory, the WorldSeed and unfinished minigames untouched; it also reports a first rerun appeared to work. However, **the exact newer patch ZIP name, checksum, file content, and Godot runtime log were not independently recovered in this audit**.
+
+**Integration rule:** Treat this as **REPORTED — NOT FILE VERIFIED**, not proof that the 09:54:53 ZIP remains the latest or that the patch passed full QA. The active Godot window should first establish the exact newest ZIP or commit and compare source checksums and affected files before any visual changes/asset imports. Preserve Tetris mechanics and inventory. Do not publish the owner's shared chat URL publicly without permission.
