@@ -11,7 +11,7 @@
 - Explore the **six-vat printing room**, with independent material feed pipes and numbered vats.
 - Stand before the **DNA double-helix Galactic Ether Relay**, which opens the pocket-dimension seam.
 - See the **Mouse Maze behavior exhibit**, with a visor mouse, chipped roach, snail, food and portal. This area is environmental, not an implemented maze game.
-- Walk past seven **physical material-intake docks**: Mouse Maze / Dig Dug / Breakout / Frogger / Asteroids / Space Invaders / Tetris Foundry. Their goods travel through the loft overhead manifold. Only the Tetris foundry is playable in this package.
+- Walk past seven **physical material-intake docks**: Mouse Maze / Dig Dog / Breakout / Frogger / Asteroids / Space Invaders / Tetris Foundry. Their goods travel through the loft overhead manifold. Only the Tetris foundry is playable in this package.
 - Explore the new **Forge Foundry floor**: ore/salvage/alloy hoppers, row-casting chamber, heating crucible, 14-block/7-tier Loft specimen storage, output conveyor, central stock exchange.
 
 ## Controls
@@ -38,7 +38,7 @@ The forge operator console is on the **east/northeast side of the DNA chamber**,
 
 The workshop initially has a labeled quantity of **staging stock** (ore, salvage, pure components). The forge receives only stock the workshop actually has. Every locked tetromino uses four material units. Alloy-enabled pieces mix pure components with base material. Filled rows crystallize into persistent `packed_block` items; salvage-rich rows can make `stabilized_frame`, alloy rows can yield `forged_blank`, and residual chamber material becomes `scrap` at the end of the run. When you return, the material receipts are deposited and saved to `user://gertech_workshop.cfg` (normal Godot per-user storage). Finished products appear physically on the shared conveyor. Forge heat, score, rows and piece holds are included in the result dictionary.
 
-The workshop exchange can spend **4 packed blocks + 1 forged blank** to build increased mouse-visor chip capacity. That equipment is held in the workshop, with a method to inject it into a future maze config. **The complete Mouse Maze, Dig Dug, Frogger, Breakout, Space Invaders, and Asteroids game loops are not implemented**; their docks are positioned and routed as environmental infrastructure, not falsely claimed to be playable minigames.
+The workshop exchange can spend **4 packed blocks + 1 forged blank** to build increased mouse-visor chip capacity. That equipment is held in the workshop, with a method to inject it into a future maze config. **The complete Mouse Maze, Dig Dog, Frogger, Breakout, Space Invaders, and Asteroids game loops are not implemented**; their docks are positioned and routed as environmental infrastructure, not falsely claimed to be playable minigames.
 
 ## Scene and code boundaries
 
