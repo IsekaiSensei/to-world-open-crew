@@ -4,7 +4,7 @@
 
 ## Scope
 
-One universal, **data-driven system** that compatible games plug into. **No active individual game projects, scripts, film renders, character runs, or story assignments.** First common mechanics: **bullets, potions, an unlimited backpack, transitions, save/load, spawners and spawn points**.
+One universal, **data-driven system** that compatible games plug into. **This is the October 30 shared-data standards document, not a restriction on newer owner-selected projects.** The November 10 [Saturn Astra modular cockpit world seed](design/SATURN_ASTRA_MODULAR_COCKPIT_WORLD_SEED_2026-11-10.md) is the current owner-selected game design; this file continues to define reusable item, spawning and persistence standards. First common mechanics: **bullets, potions, an unlimited backpack, transitions, save/load, spawners and spawn points**.
 
 Canonical source files: [Shared JSON schema](UNIVERSAL_GAME_SCHEMA.json) · [Working data example](UNIVERSAL_GAME_EXAMPLE.json).
 
