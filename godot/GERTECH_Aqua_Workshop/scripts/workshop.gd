@@ -367,29 +367,29 @@ func _workbench(center: Vector3, width: float, depth: float, surface: Material) 
 
 
 func _add_gertech_sample_parts() -> void:
-    # Passive presentation props on existing arrival-gallery console benches.
-    # These NEVER enter the persistent WorldSeed and NEVER mint new items.
-    VisualKit.display_cube(props, Vector3(-13.0, 1.85, 28.0), 1.16, "Crystal_Gold_Block_Sample")
-    VisualKit.display_cube(props, Vector3(13.0, 1.85, 28.0), 1.16, "Galaxy_Glass_Block_Sample")
-    _text(props, "CRYSTAL / GOLD / MODULAR", Vector3(-13.0, 3.0, 29.8), 17, Color("f6d899"))
-    _text(props, "BLOCK HOUSING DEMO", Vector3(13.0, 3.0, 29.8), 17, Color("aee7ff"))
-    _lamp(Vector3(-13, 4.3, 28.0), Color("c4e7ff"), 0.75, 5.0)
-    _lamp(Vector3(13, 4.3, 28.0), Color("f2d69b"), 0.75, 5.0)
+	# Passive presentation props on existing arrival-gallery console benches.
+	# These NEVER enter the persistent WorldSeed and NEVER mint new items.
+	VisualKit.display_cube(props, Vector3(-13.0, 1.85, 28.0), 1.16, "Crystal_Gold_Block_Sample")
+	VisualKit.display_cube(props, Vector3(13.0, 1.85, 28.0), 1.16, "Galaxy_Glass_Block_Sample")
+	_text(props, "CRYSTAL / GOLD / MODULAR", Vector3(-13.0, 3.0, 29.8), 17, Color("f6d899"))
+	_text(props, "BLOCK HOUSING DEMO", Vector3(13.0, 3.0, 29.8), 17, Color("aee7ff"))
+	_lamp(Vector3(-13, 4.3, 28.0), Color("c4e7ff"), 0.75, 5.0)
+	_lamp(Vector3(13, 4.3, 28.0), Color("f2d69b"), 0.75, 5.0)
 
 func _reset_workshop_in_place() -> void:
-    if active_foundry != null:
-        return
-    var ok := inventory.reset_workshop_to_empty()
-    worldseed_renderer.show_tetra_surfaces = false
-    worldseed_renderer._redraw()
-    player.global_position = Vector3(0, 0.45, 31.8)
-    player.rotation = Vector3.ZERO
-    player.camera_pitch = 0.0
-    player.camera.rotation = Vector3.ZERO
-    player.fly_mode = false
-    player.velocity = Vector3.ZERO
-    result_label.text = "RESET COMPLETE / EMPTY WORLDSEED / STARTER STOCK" if ok else "RESET ERROR / SAVE FAILED"
-    reset_arm_deadline_msec = 0
+	if active_foundry != null:
+		return
+	var ok := inventory.reset_workshop_to_empty()
+	worldseed_renderer.show_tetra_surfaces = false
+	worldseed_renderer._redraw()
+	player.global_position = Vector3(0, 0.45, 31.8)
+	player.rotation = Vector3.ZERO
+	player.camera_pitch = 0.0
+	player.camera.rotation = Vector3.ZERO
+	player.fly_mode = false
+	player.velocity = Vector3.ZERO
+	result_label.text = "RESET COMPLETE / EMPTY WORLDSEED / STARTER STOCK" if ok else "RESET ERROR / SAVE FAILED"
+	reset_arm_deadline_msec = 0
 
 func _build_arrival_gallery() -> void:
 	_station_sign("GERTECH  /  AQUA WORLD", "UNDER SAN DIEGO BAY  •  RESEARCH AND FABRICATION", Vector3(0, 8.6, 37.65), 27.0)
