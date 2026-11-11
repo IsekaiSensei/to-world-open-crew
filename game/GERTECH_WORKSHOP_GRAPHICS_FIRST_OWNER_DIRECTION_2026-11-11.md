@@ -1,3 +1,5 @@
+> **OWNER SCOPE UPDATE — NOVEMBER 11 (later decision):** The earlier graphics-first instruction to defer new minigames remains binding for the **main workshop/core development branch**. Ryan now explicitly authorizes Grokbots to build **one optional BREAKOUT / refined-parts prototype IN ISOLATION**. Grok/Grokbots may add self-contained code and report verified test results but may NOT edit or stub the actual inventory/WorldSeed/Foundry/workshop project, invent materials, publish private artwork, or auto-merge. ChatGPT owns and tests the existing core and decides the eventual interface. Existing dock reads `BREAKOUT / REFINED PARTS`; intended pipeline: `salvage` → impact liberation and sorting → `pure_component` and `scrap` (with bounded receipts, no free output). [Exact issue and acceptance criteria](https://github.com/IsekaiSensei/chat.work.open.ai/issues/13). This game scope change does NOT affect film direction.
+
 # GERTECH / TO WORLD — Owner direction: graphics-first workshop, scalable WorldSeed
 **Date:** 2026-11-11 · **Owner:** Isekai Ryan · **Scope:** GAME design and Godot workshop. **Not** a film/render directive.
 
