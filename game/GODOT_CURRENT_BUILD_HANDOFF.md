@@ -1,0 +1,71 @@
+# GERTECH / Aqua Workshop + Forge Loft — CURRENT BUILD / SOURCE HANDOFF
+**Date:** 2026-11-11 (Pacific)  
+**Contributing window:** ChatGPT — Steam Deck / j5create SD reader troubleshooting window; owner-requested Godot cross-window publication.  
+**Status:** **SOURCE PUBLISHED, ZIP CHECKED, PYTHON GEOMETRY TEST PASSED; GODOT RUNTIME UNTESTED.** This is a source publication and integration handoff, **not a new game feature or a runtime-tested release**.
+
+## 1 — Authoritative source and version
+- **Newest package actually retrieved and byte-checked in this window:** `GERTECH_Aqua_Workshop_Premium_Graphics_First_2026-11-11.zip` (private [Drive copy](https://drive.google.com/file/d/1bYIhdn3Cvy39TXIXONGhS8sANoYdfsg_/view)).
+- **SHA-256:** `cc8c3ed6cb41ecac102715b06256ebb9630aeacb4507b6370822d8ca27124276`
+- **ZIP size:** 1,534,914 bytes; 82 entries; CRC checked here with Python `ZipFile.testzip()` and passed.
+- Earlier identified package: `gertech_-_aqua_workshop_+_forge_loft_2026-11-11_09-54-53.zip`; SHA-256 `91ad30f4e9516fe0da38f8978e71c8e79cef2d8d65dd0d2fa53a1688e5556411` (previous independent receipt, **not** rerun on old ZIP in this window).
+- Intermediate visual/reset base cited in the premium build README: `GERTECH_Modular_Crystal_Gold_Foundry_Reset_2026-11-11.zip`; checksum `8b8cf035f8d930348bd358730d5eb6f17f0c20d7a3793807c2cbbf1b6c73a09f` (**prior author receipt only**, not independently fetched here).
+- **Godot project:** Godot **4.7**, **GL Compatibility** renderer, `config_version=5`. Main scene: `res://scenes/workshop.tscn`; Forge scene: `res://theme_foundry/forge_foundry.tscn`.
+- ZIP project root and **public owner-safe source path:** `GERTECH_Aqua_Workshop/` -> [`godot/GERTECH_Aqua_Workshop/`](../godot/GERTECH_Aqua_Workshop/).
+- **Actual GitHub source commit:** [`5e1a697256377311239a267f777c1ad03717144d`](https://github.com/IsekaiSensei/to-world-open-crew/commit/5e1a697256377311239a267f777c1ad03717144d). This includes **55 text/source files (including the public asset manifest) and 9 safe generic/generated images**, preserving relative file locations and Godot script UID sidecars.
+- **Source manifest:** [`godot/GERTECH_Aqua_Workshop/SOURCE_ASSET_MANIFEST.md`](../godot/GERTECH_Aqua_Workshop/SOURCE_ASSET_MANIFEST.md). The private original GLBs and the original companion source texture are NOT in public GitHub. Their expected paths and a private source ZIP are linked there. Generated Godot `.import` cache sidecars were also excluded; Godot regenerates these.
+- **No earlier full Godot project existed in the main game's `godot/` root when checked**. We added this dedicated tree without replacing the existing `world_seed_v0_1/`, standards, Garden proposals or an older game project.
+
+## 2 — What's present in real source (not a promise of runtime behavior)
+**Core game:** `core/tetris/tetromino_grid.gd` is a 10×20 grid with I/O/T/L/J/S/Z rules; `core/game_loop/minigame_interface.gd` defines the minigame contract. `theme_foundry/forge_foundry.gd` uses the grid and draws a Foundry/Tetris UI. Its output structures include `packed_block`, `stabilized_frame`, `forged_blank`, `scrap`. The code distinguishes actual source materials consumed from rewards produced. Enter at the workshop console; the other named arcade docks are environmental, not implemented gameplay. The workshop inventory code prices the visor-chip exchange at **4 packed blocks + 1 forged blank**.
+
+**Shared inventory and save/load:** `workshop/inventory.gd` delegates authoritative counts, equipment and receipts to `worldseed/world_seed.gd` rather than carrying a second ledger. `WorldSeed.CURRENT_VERSION = "1.0"`; JSON at `user://gertech_worldseed_v1.json`, with backward import attempt from `user://gertech_workshop.cfg`. Events, assemblies, vertices, edges, tetras, equipment, inventory, ID counters and foundry runs are serialized. Workshop F9 twice within 5 seconds calls empty-scaffold / starting-stock reset with backup `user://gertech_worldseed_before_reset.json` (per project source and README). Existing controls (WASD, pointer, N, E, K, forge controls, Y/G/B/V/T) are retained; this window did not alter them.
+
+**WorldSeed/modules/graph:** `worldseed/{vertex,edge,assembly,tetrahedron,module_types,world_event,world_seed,seed_renderer,vertex_lattice_growth,delaunay_edges,delaunay_3d,silhouette_tetra_mesher}.gd`. The silhouette path voxelizes a masked 2D shape and splits occupied cells into six face-conforming tetras; it is not reconstruction of an arbitrary 3D car from one image. Visual gold struts and Delaunay proximity edges **do not certify a connected physical port**. The older separate [Construction DNA v0.1](../world_seed_v0_1/) may provide port and inventory-free creative-build semantics, but its adapter/round-trip is **NOT implemented or tested in this new published source**. Validate before merging, rather than replacing either model.
+
+## 3 — Newer visual work *present in the retrieved package*
+**Foundry visual-only patch, included in this latest source ZIP:**
+- `graphics/foundry_cell_skin.gd`: shape-coded crystal/metal/gold cell surfaces, active piece and placement ghost.
+- `graphics/foundry_console_skin.gd`: procedural cast-metal console, gauges, rails, chamber, receipt visuals.
+- `theme_foundry/forge_foundry.gd`: draws the graphics layer and preloads the two helpers. Its `FOUNDRY_VISUAL_UPGRADE_README.md` asserts old stock/rules code was not changed except visual preloads. We inspected the delivered source but **did not independently diff against the inaccessible 09:54 ZIP in this window**. The visual pass is source-present; runtime visual proof is still outstanding.
+
+**Premium architecture / materials visual-only pass:**
+- `graphics/premium_workshop_pass.gd` adds actual procedural `BoxMesh`, `CylinderMesh`, `TorusMesh`, beam runs, `MultiMeshInstance3D` fasteners, pressure window gaskets, ceiling gold trusses, deck inlays, piping, fixture housings, braces around existing vats, and soft fill lights.
+- `graphics/aqua_caustics.gdshader` adds animated underwater light effect; `graphics/gertech_galaxy.gdshader` and `graphics/gertech_visual_kit.gd` support earlier crystal / gold / interior visuals.
+- Material parameters use metalness/roughness, emission and contrasting ceramic, gold/bronze, graphite, glass/crystal looks; **eight generated neutral PBR color/normal PNGs** for brushed alloy, carbon weave, ceramic and deck are published. The project uses environmental illumination to supply reflected color, but actual glass clarity, reflections, scale legibility and FPS have **NOT** been visually verified in Godot.
+- `scripts/workshop.gd` attaches the presentation pass without changing WorldSeed item counts or functional port registration. `project.godot` adds opt-in visual setting `gertech_visuals/quality_level` **0/1/2/3**, default **3**. Lower Deck-friendly detail modes require a real FPS comparison.
+- The earlier premium author receipt asserts **66 previous files unchanged**, with only `scripts/workshop.gd` and `project.godot` modified and new assets/scripts/docs added. That claim is **a previous author's source-diff receipt**, not an independent old-vs-new byte comparison performed in this window.
+
+## 4 — Source inventory published (original content, paths preserved)
+- Root: `project.godot`, `README.md`, `FOUNDRY_VISUAL_UPGRADE_README.md`, `PREMIUM_WORKSHOP_BUILD_2026-11-11.md`, `SOURCE_ASSET_MANIFEST.md`, `workshop_corrected.gd`.
+- Scenes: `scenes/workshop.tscn`, `theme_foundry/forge_foundry.tscn`.
+- Scripts: `scripts/explorer.gd`, `scripts/workshop.gd`, `scripts/workshopver1.gd`; `workshop/inventory.gd`; `core/game_loop/minigame_interface.gd`; `core/tetris/tetromino_grid.gd`; `theme_foundry/forge_foundry.gd`.
+- Graphics: `graphics/foundry_cell_skin.gd`, `graphics/foundry_console_skin.gd`, `graphics/gertech_visual_kit.gd`, `graphics/premium_workshop_pass.gd`, `graphics/gertech_galaxy.gdshader`, `graphics/aqua_caustics.gdshader`.
+- WorldSeed: `worldseed/assembly.gd`, `worldseed/delaunay_3d.gd`, `worldseed/delaunay_edges.gd`, `worldseed/edge.gd`, `worldseed/module_types.gd`, `worldseed/seed_renderer.gd`, `worldseed/silhouette_tetra_mesher.gd`, `worldseed/tetrahedron.gd`, `worldseed/vertex.gd`, `worldseed/vertex_lattice_growth.gd`, `worldseed/world_event.gd`, `worldseed/world_seed.gd`.
+- Test: `tests/check_voxel_tetra.py`. Godot `*.gd.uid` references kept; generic `assets/icon.svg`, `assets/silhouette/demo_alpha_mask.png` and eight original-to-this-game generated `assets/premium/*.png` are included. Source archive's `assets/gertech_cube/parts/*.glb` and associated original source PNG are **not public**.
+- This window **did not modify any original game script or scene logic** when publishing to GitHub. The only authoring addition in that source tree is the truthful `SOURCE_ASSET_MANIFEST.md`.
+
+## 5 — Problems, fixes, testing evidence
+**Older issue recorded in the retrieved README:** mixed spaces/tabs in Foundry GDScript previously caused a parser error; a prior revision reports normalizing indentation. **This window did not run Godot to verify the fix.** Earlier automatic scaffold generation was intentionally changed to empty-on-start with manual G build; this is source-present, not a new change by this window. Source GLBs are still private and must be restored to reconstruct every gallery display. No engine import/readback, on-device lighting/reflections/collider check, performance reading, Tetris controller playtest or real save/load test was performed here.
+
+**Actually run in THIS window (2026-11-11):**
+1. Retrieved the private premium ZIP through connected Google Drive; compared byte length (1,534,914) and independently computed SHA-256 **PASS** against the receipt above.
+2. Opened archive and executed Python `ZipFile.testzip()`: **PASS, no bad CRC; 82 entries**.
+3. Extracted the ZIP and executed `python tests/check_voxel_tetra.py`: **PASS**, reporting six nondegenerate tetras per occupied voxel, conforming neighbor faces across x/y/z, no nonmanifold shared triangles/artificial shared-face boundary.
+4. Static source inspection: verified 24 `.gd` scripts, 2 `.tscn` scenes, 2 `.gdshader`; no absent `res://` references found by a simple string scan **within the full private ZIP**. This is NOT a parser/engine check.
+5. GitHub source publication [commit](https://github.com/IsekaiSensei/to-world-open-crew/commit/5e1a697256377311239a267f777c1ad03717144d) reported success and selected code readback (project, workshop, Foundry, WorldSeed and manifest) succeeded.
+6. **Godot engine executable absent** in this tool environment. **GODOT IMPORT/RUN, FPS, visual comparisons, and save/load playback: NOT TESTED.**
+
+## 6 — What is NOT implemented / unresolved
+- No new minigames beyond the existing Tetris Foundry. Mouse Maze, Dig Dug, Frogger, Breakout, Asteroids and Space Invaders remain docks/proposals, not playable.
+- Coral idle, autonomous swarms/probes, casting/clay gameplay, automated workers, upgrades beyond existing visor exchange, new characters/ships and film directions: not added here.
+- No verified Construction DNA v0.1 port-validator ⇄ WorldSeed 1.0 adapter or test. Delaunay edges are geometry, not automatically physical connections.
+- Private original GLBs/texture excluded from public GitHub deliberately. Complete 3D rendering requires the owner's private ZIP; do not replace with AI-generated assets.
+- Need Godot 4.7 GL Compatibility editor import, scene launch, first-person navigation, gameplay, material ledger round trip, F9 reset/save migration, shader/transparent rendering, GLB import sanity and Deck FPS/settings 0–3 measurements. Do not mark these PASS until performed.
+- This window's earlier conversation was about diagnosing **Steam Deck j5create dock SD reader/video transfer speed**. It included **no Godot code edits, scenes, visual renders or game tests** prior to this owner-requested GitHub handoff. Do not attribute game improvements to that troubleshooting conversation.
+
+## 7 — Integration orders / collaboration
+**Current game remains the one project.** Start from the confirmed premium owner ZIP and the published source tree; keep its existing Tetris rules and WorldSeed save stable. Do not create a second `WorldSeed` or restart the workshop. Treat the graphics pass as optional display layered on data. Other agent work is coordinated in [GitHub issue #12](https://github.com/IsekaiSensei/chat.work.open.ai/issues/12) and the **single** [shared brainstorm](https://github.com/IsekaiSensei/chat.work.open.ai/blob/main/brainstorm/GERTECH_SHARED_BRAINSTORM_2026-11-10.md). Game standards and the [owner graphics-first direction](GERTECH_WORKSHOP_GRAPHICS_FIRST_OWNER_DIRECTION_2026-11-11.md) control; **film/Meta orders are untouched**.
+
+**Next ChatGPT + Grok:** restore private GLBs only into a local/private checkout, import Godot 4.7 GL Compatibility, record parser errors first, then gameplay/inventory/save reset and settings 0–3 FPS. Return real screenshots/logs and exact file+line fixes as new commits or PRs. Do not overwrite this source with an earlier ZIP; coordinate proposed WorldSeed adapter and GLB collisions/scale separately.
+
+**Source publication note:** The main source tree is published directly from the retrieved premium ZIP with no redesign. This handoff is the accurate status record, not a runtime pass certificate.
