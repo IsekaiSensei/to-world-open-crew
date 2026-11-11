@@ -807,7 +807,7 @@ func _build_classic_intake_docks() -> void:
 	# not seven isolated arcade cabinets or implementations of seven minigames.
 	var docks: Array = [
 		["MOUSE MAZE", "FOOD + GUIDES", Vector3(-9.65, 0, 23.6), "amber"],
-		["DIG DUG", "ORE + SOIL", Vector3(-9.65, 0, 13.0), "bronze"],
+		["DIG DOG", "ORE + SOIL", Vector3(-9.65, 0, 13.0), "bronze"],
 		["BREAKOUT", "REFINED PARTS", Vector3(-9.65, 0, 2.4), "ceramic"],
 		["FROGGER", "DELIVERED STOCK", Vector3(-9.65, 0, -8.2), "green"],
 		["ASTEROIDS", "SALVAGE + ROCK", Vector3(9.65, 0, 22.0), "blue"],
@@ -829,7 +829,7 @@ func _build_classic_intake_docks() -> void:
 	_text(details, "7 CLASSICS  →  ONE MATERIAL NETWORK", Vector3(0, 11.4, 13.0), 23, Color("fff0ca"))
 
 func _build_tetris_forge() -> void:
-	_station_sign("07  /  TETRIS FORGE FOUNDRY", "DIG DUG + ASTEROIDS IN  /  MODULAR STRUCTURES OUT", Vector3(27.0, 7.25, -12.1), 22.5)
+	_station_sign("07  /  TETRIS FORGE FOUNDRY", "DIG DOG + ASTEROIDS IN  /  MODULAR STRUCTURES OUT", Vector3(27.0, 7.25, -12.1), 22.5)
 	_box(props, "Forge_Floor", Vector3(27, 0.12, -26), Vector3(27, 0.18, 20), mats["plinth"])
 	for xx in [14.25, 39.75]:
 		_box(props, "Forge_Thermal_Rail", Vector3(xx, 0.23, -26), Vector3(0.18, 0.09, 19.0), mats["amber"])
