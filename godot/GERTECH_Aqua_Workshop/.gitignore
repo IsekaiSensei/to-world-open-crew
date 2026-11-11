@@ -1,8 +1,9 @@
+# Keep owner-private original GLBs and personal/source art outside public GitHub.
+# Generated neutral PBR textures in assets/premium/ are allowed and already versioned.
+.godot/
 *.glb
 *.gltf
 *.blend
-*.png
-*.jpg
-*.jpeg
-*.webp
-.godot/
+assets/gertech_cube/parts/cube_1m_0.png
+assets/private/
+assets/user_reference/
