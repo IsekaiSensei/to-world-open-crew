@@ -1,3 +1,5 @@
+> **NOV 11 OWNER UPDATE — CURRENT GAME FOCUS:** Graphics-first playable Aqua Workshop / Forge Loft. Preserve existing minigame behavior, inventory, WorldSeed, player controls, and save/reset. Defer new minigames, coral idle gameplay and swarm automation to later phases. Keep film separately routed. [Full graphics-first and eventual game learning / distributed production direction](GERTECH_WORKSHOP_GRAPHICS_FIRST_OWNER_DIRECTION_2026-11-11.md). Latest ZIP runtime verification remains a separate task.
+
 # GERTECH Godot — cross-window audit and integration handoff
 **Owner:** Isekai Ryan · **Date:** November 11, 2026 · **Status:** filed game reference; NO code merge or Godot engine test
 
