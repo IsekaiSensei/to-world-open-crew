@@ -210,16 +210,16 @@ func load_data(d: Dictionary) -> void:
 # Workshop-only explicit reset. Preserves resource identity and signal listeners.
 # Fixed architecture and minigame code are intentionally outside this ledger.
 func reset_to_empty_starter_stock() -> void:
-    vertices.clear()
-    edges.clear()
-    assemblies.clear()
-    tetras.clear()
-    event_log.clear()
-    inventory = STARTER_STOCK.duplicate(true)
-    equipment = {"visor_chip_capacity": 1}
-    next_ids = {"vertex": 1, "edge": 1, "assembly": 1, "tetra": 1, "event": 1}
-    foundry_runs = 0
-    changed.emit()
+	vertices.clear()
+	edges.clear()
+	assemblies.clear()
+	tetras.clear()
+	event_log.clear()
+	inventory = STARTER_STOCK.duplicate(true)
+	equipment = {"visor_chip_capacity": 1}
+	next_ids = {"vertex": 1, "edge": 1, "assembly": 1, "tetra": 1, "event": 1}
+	foundry_runs = 0
+	changed.emit()
 
 func save_to_disk() -> bool:
 	var file := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
