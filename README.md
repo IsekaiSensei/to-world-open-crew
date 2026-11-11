@@ -14,3 +14,8 @@ All old scripts, batch productions, rendered-story assignments and standalone ga
 - [Meta agent instructions](https://github.com/IsekaiSensei/chat.work.open.ai/blob/main/META.md)
 
 Art/video are maintained separately in Drive; these are game **data** and **standards**, not media or active projects.
+
+
+## Godot development — cross-window continuity (November 11, 2026)
+
+**Current game context:** the owner supplied a newer GERTECH / Aqua Workshop + Forge Loft Godot 4.7 source ZIP in another ChatGPT window (76 archive entries; 20 GDScripts, 2 scenes, 6 GLBs, with workshop/WorldSeed and Tetris Forge). The older world_seed_v0_1 preview and 31-file ZIP are reference/historical prototypes, **not proof of the latest runnable game**. Source archive and checksum are recorded in [Godot Cross-Window Handoff](game/GODOT_CROSS_WINDOW_HANDOFF_2026-11-11.md), along with verified November 11 Grok GitHub/Drive pushes, existing/missing feature boundaries, and the owner’s most recent Godot-script/material-detail direction. **No game code was merged by this documentation update; Godot runtime testing remains a separate verification gate.** The [one shared ChatGPT–Grok brainstorm](https://github.com/IsekaiSensei/chat.work.open.ai/blob/main/brainstorm/GERTECH_SHARED_BRAINSTORM_2026-11-10.md) remains the developing idea log. Existing assets remain in private Drive; do not publish original art by changing this README.
