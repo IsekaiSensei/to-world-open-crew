@@ -1,0 +1,377 @@
+{
+  "source_commit": "453107e10352882b854a2e90651d17bb2ea2dd09",
+  "archive_sha256": "cc8c3ed6cb41ecac102715b06256ebb9630aeacb4507b6370822d8ca27124276",
+  "files": [
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/FOUNDRY_VISUAL_UPGRADE_README.md",
+      "blob_sha": "76bb57be798b620c7864b8354bb82487f4b7c6ae",
+      "sha256": "5f3f5754ca452462b4ddfd0f5af644403188e7b8b67bbb77b34f3c7f231f6e12",
+      "github_blob_sha": "76bb57be798b620c7864b8354bb82487f4b7c6ae",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/PREMIUM_WORKSHOP_BUILD_2026-11-11.md",
+      "blob_sha": "01c80c91bd06fc072f25dc9d0b2aee79d87911c6",
+      "sha256": "f0d18ed4ae494e4dc224ad7a5ffc95cd660a1729ab3d6aaae6d5c47408ce497a",
+      "github_blob_sha": "01c80c91bd06fc072f25dc9d0b2aee79d87911c6",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/README.md",
+      "blob_sha": "e6eb542e1fcecfa0a9f09e649dee8f9d837f3c60",
+      "sha256": "a77b228530b14874d8192be2ebfae74cbbac86daa14fc469b520c6084b316e56",
+      "github_blob_sha": "e6eb542e1fcecfa0a9f09e649dee8f9d837f3c60",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/core/game_loop/minigame_interface.gd",
+      "blob_sha": "dc612d7257bf0ae23d4206ef2e8cfb6e23c7f4d9",
+      "sha256": "4a4b06dee4590fe14eed845fc5a1e390d09387bfe56e63418df9380e27b14e0d",
+      "github_blob_sha": "dc612d7257bf0ae23d4206ef2e8cfb6e23c7f4d9",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/core/game_loop/minigame_interface.gd.uid",
+      "blob_sha": "ed3a214e54fc6328985bc711988aaf94d35c63bc",
+      "sha256": "ffe55a4e3373f642011b07c13afb7c5081130203ad83a7abc03b27187268d2e9",
+      "github_blob_sha": "ed3a214e54fc6328985bc711988aaf94d35c63bc",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/core/tetris/tetromino_grid.gd",
+      "blob_sha": "da686159b3d04b4ab2efc7bc2f250c1bb91b4e48",
+      "sha256": "b81a093bee29695d38fe44790088248ea71731510aff52108524ce1d4c135b78",
+      "github_blob_sha": "da686159b3d04b4ab2efc7bc2f250c1bb91b4e48",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/core/tetris/tetromino_grid.gd.uid",
+      "blob_sha": "22873c4ac42297061b667f95d7958053bd982bd9",
+      "sha256": "f615d135ed9f9e950be5bde46eac4b197ee92a446919d6c57614fc728343b479",
+      "github_blob_sha": "22873c4ac42297061b667f95d7958053bd982bd9",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/graphics/aqua_caustics.gdshader",
+      "blob_sha": "9c81bc920cc598ceceb3b4469a4a0d7b76dec01c",
+      "sha256": "cce6eeda3d5aaaebbd59846b80a7f8cf4b5583813bac916d98b5bde9a9fb3d6d",
+      "github_blob_sha": "9c81bc920cc598ceceb3b4469a4a0d7b76dec01c",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/graphics/foundry_cell_skin.gd",
+      "blob_sha": "a315e86912ab0b7721f3e1e811e13dd0812f3ab2",
+      "sha256": "56d2a85d5239978c770ac0b4cd9b43155f5c0ba65c2bc2ab487d4b66ac5fbf7c",
+      "github_blob_sha": "a315e86912ab0b7721f3e1e811e13dd0812f3ab2",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/graphics/foundry_console_skin.gd",
+      "blob_sha": "b980526d18aebbff47bb27f07a87045b305abb21",
+      "sha256": "ca0d0b335d200e2931edd49dc40d6a8ff35364067b7df671de6793d022fdac4f",
+      "github_blob_sha": "b980526d18aebbff47bb27f07a87045b305abb21",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/graphics/gertech_galaxy.gdshader",
+      "blob_sha": "4b3f7d481874444909eb1414636d9e03c7a42167",
+      "sha256": "4e2962eddb30eeb883fdb8697b811f2e8c94d3e8503da1c0ac160ff0edc4753f",
+      "github_blob_sha": "4b3f7d481874444909eb1414636d9e03c7a42167",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/graphics/gertech_visual_kit.gd",
+      "blob_sha": "8623aad586df7be198c5dbc85e596b552be57978",
+      "sha256": "277b69d275ba62c216a92e7380e514f68c95fa84c59d8a92ab9f0ffb79b76853",
+      "github_blob_sha": "8623aad586df7be198c5dbc85e596b552be57978",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/graphics/premium_workshop_pass.gd",
+      "blob_sha": "6552a25bab48fc9e604f7ff5d52303b518b7b2ea",
+      "sha256": "2715730fd1b41a28e91b12012b24e97020dfad6f058ea7c8df5de8c4a4480fdf",
+      "github_blob_sha": "6552a25bab48fc9e604f7ff5d52303b518b7b2ea",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/project.godot",
+      "blob_sha": "caf54d73dc8c14cda14c53c115cfc1bbf0b402a3",
+      "sha256": "ff64a391c97db2068699dfc22a552209c58c700baa53295efd89cffa5338bf2b",
+      "github_blob_sha": "caf54d73dc8c14cda14c53c115cfc1bbf0b402a3",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/scenes/workshop.tscn",
+      "blob_sha": "df7c332305fc04f4ffb8d12d6221e333c84b1931",
+      "sha256": "23cfd59ed15a5463008f732e510118a0ac4cdd9d341b6c699f7639b3731be076",
+      "github_blob_sha": "df7c332305fc04f4ffb8d12d6221e333c84b1931",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/scripts/explorer.gd",
+      "blob_sha": "98157862d77a899919fbd314b76dce9f0a032f5e",
+      "sha256": "2932747390590f07b0e9e7f3ea0c9ed6ed32a58a08db49f4ab4b51f9ce624982",
+      "github_blob_sha": "98157862d77a899919fbd314b76dce9f0a032f5e",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/scripts/explorer.gd.uid",
+      "blob_sha": "a78f8090f23fe8e588b4a6ff775a6095029202bd",
+      "sha256": "b5657bcd29319c66eb81b87c87296e381e54bd926e437508003e6c8ab3f765eb",
+      "github_blob_sha": "a78f8090f23fe8e588b4a6ff775a6095029202bd",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/scripts/workshop.gd",
+      "blob_sha": "ccae997de5cd1db3a55ba8b3cdabadfc024dbb1b",
+      "sha256": "2ae34034304d944d4b0d48a3a5f4626b58fd3c4e9818816a587a8b7f09ded4f1",
+      "github_blob_sha": "ccae997de5cd1db3a55ba8b3cdabadfc024dbb1b",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/scripts/workshop.gd.uid",
+      "blob_sha": "a7fce56dcd70a6a9cb6cc4e03686c113f80d773b",
+      "sha256": "bedac2c92195745d53980a2e47f62de6c3e3eb8cc6ed02b639e928ccfbc2d33c",
+      "github_blob_sha": "a7fce56dcd70a6a9cb6cc4e03686c113f80d773b",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/scripts/workshopver1.gd",
+      "blob_sha": "db752eb3a4f4e6ff6051956f5af378378bd6cb47",
+      "sha256": "15a1fb994d67efb69e0dc84a91261ca2b890b7b1e94f2046a7aff03f92455bb2",
+      "github_blob_sha": "db752eb3a4f4e6ff6051956f5af378378bd6cb47",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/scripts/workshopver1.gd.uid",
+      "blob_sha": "b19aff90d3d49047e85fca7e977e3e2cf0b1b511",
+      "sha256": "3a09b337fd2670ba0102e0665b0d2df729d3cbf9e45ddc2a9d7a9de67bbc2866",
+      "github_blob_sha": "b19aff90d3d49047e85fca7e977e3e2cf0b1b511",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/tests/check_voxel_tetra.py",
+      "blob_sha": "0c4275534d7a2bc92fb1fbeae95eb8b212b30478",
+      "sha256": "848ae749815c75171cf3d4f3a604db46510afbd8070880130d216e68ab2ce76e",
+      "github_blob_sha": "0c4275534d7a2bc92fb1fbeae95eb8b212b30478",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/theme_foundry/forge_foundry.gd",
+      "blob_sha": "a84dc31927d339871327f13c62d0280e9bc92522",
+      "sha256": "19b67b5e59e71228a4cc54f7f4a4b54aee64b312fc1d37fe7768e871ffd7ae40",
+      "github_blob_sha": "a84dc31927d339871327f13c62d0280e9bc92522",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/theme_foundry/forge_foundry.gd.uid",
+      "blob_sha": "12addff905a30358de541236082ff4860b31f63c",
+      "sha256": "e8c05dced5637b93b3607145bcda645ae2f323eeef33b96bc22425b0448e539a",
+      "github_blob_sha": "12addff905a30358de541236082ff4860b31f63c",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/theme_foundry/forge_foundry.tscn",
+      "blob_sha": "e82acd9d9f7a4e4275dfd3fe6532b661cd768092",
+      "sha256": "826bce0e619f1d35870601e3c37b50b630cd5256de065b3dc5c63a1b7e5306c4",
+      "github_blob_sha": "e82acd9d9f7a4e4275dfd3fe6532b661cd768092",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/workshop/inventory.gd",
+      "blob_sha": "e55e9d2a5d579769b4f6d14278324abdab052f83",
+      "sha256": "4ee5bf6955bd6d6dcad2e75b3158b521389322b43a36090473da2a02ee7bf26a",
+      "github_blob_sha": "e55e9d2a5d579769b4f6d14278324abdab052f83",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/workshop/inventory.gd.uid",
+      "blob_sha": "92c0e4915b7e2581679dfdfc0b0fcfb96c5bbe14",
+      "sha256": "f1d7ed799ad8847630c7925c53f77f5c953c1e1c07220a7aa9431ed0bda7476d",
+      "github_blob_sha": "92c0e4915b7e2581679dfdfc0b0fcfb96c5bbe14",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/workshop_corrected.gd",
+      "blob_sha": "91e371edc0bc308c08a96befb9e7db16f64575b9",
+      "sha256": "87071c47df6fef2402ff500659dca22a99c3d17788ff092e364df51a64a0f951",
+      "github_blob_sha": "91e371edc0bc308c08a96befb9e7db16f64575b9",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/workshop_corrected.gd.uid",
+      "blob_sha": "f554fa53a3bd17f9449d89ee37282a3cb4dc4308",
+      "sha256": "638436f881e67d3aa135bec0ee4e333d19ae6c2d3de80c6a8835c7995dcc3876",
+      "github_blob_sha": "f554fa53a3bd17f9449d89ee37282a3cb4dc4308",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/worldseed/assembly.gd",
+      "blob_sha": "c9b70f3549d5ab69595354d3457fe8ff08616603",
+      "sha256": "5dab6e13bb479ebaee74aba98b58f93d751f2adf3025b8208ece23dd7be5577f",
+      "github_blob_sha": "c9b70f3549d5ab69595354d3457fe8ff08616603",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/worldseed/assembly.gd.uid",
+      "blob_sha": "11aa8b9e866ee6a81c30ffbd338d562305353476",
+      "sha256": "376ad331e62ac57ffbbcfbef5097630c98448ad7cbb61abdcba03b5951bce1ba",
+      "github_blob_sha": "11aa8b9e866ee6a81c30ffbd338d562305353476",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/worldseed/delaunay_3d.gd",
+      "blob_sha": "0795e6acb051f1397d620c0b91fa952c5b8cc702",
+      "sha256": "eb83a67ac925e23df8729d2c8f92e253097cf0711150ef44e1080e30634429f5",
+      "github_blob_sha": "0795e6acb051f1397d620c0b91fa952c5b8cc702",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/worldseed/delaunay_3d.gd.uid",
+      "blob_sha": "aaac6d8c8a69c86d447bffec9145d5c66cf82036",
+      "sha256": "74a116bd09857093d217da7839ba7b6b87b98d7e7daf1e199d40ceeed67d96d9",
+      "github_blob_sha": "aaac6d8c8a69c86d447bffec9145d5c66cf82036",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/worldseed/delaunay_edges.gd",
+      "blob_sha": "a2a188d0d21a2ee5c2e4f3e6e2fffd471804bb16",
+      "sha256": "4ad76c8746fd042895b3cb9eff0c9ebc4cc40478d0e6b5ef25ecb2e8ec7f1105",
+      "github_blob_sha": "a2a188d0d21a2ee5c2e4f3e6e2fffd471804bb16",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/worldseed/delaunay_edges.gd.uid",
+      "blob_sha": "b49886adadf124de1e147c5124b15cc94e5c23c3",
+      "sha256": "15c2edf6733ccb8e555b1adc79b1249b642340a7f479674119098c8ebc5c000c",
+      "github_blob_sha": "b49886adadf124de1e147c5124b15cc94e5c23c3",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/worldseed/edge.gd",
+      "blob_sha": "980c1cbcef43fa5c9e92d8979326e0bf72312fdc",
+      "sha256": "62a605a3580c79add295f11df36676c820f5f8b686c49d6e826bee3a1d9b81ab",
+      "github_blob_sha": "980c1cbcef43fa5c9e92d8979326e0bf72312fdc",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/worldseed/edge.gd.uid",
+      "blob_sha": "65fe3166c77e6a3338a5f4f3d6974465d9e13e9a",
+      "sha256": "7ab0da97e1f182cb9b4e287a91789b1ae6beba7f7fb614c635093b10ab5e3fa1",
+      "github_blob_sha": "65fe3166c77e6a3338a5f4f3d6974465d9e13e9a",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/worldseed/module_types.gd",
+      "blob_sha": "f6474df5a74164f9086a671d0ab852231810a895",
+      "sha256": "28eaddd0ea671a2ad8c08a7eeac6a21189080b8d353237784ed1482a92c4f835",
+      "github_blob_sha": "f6474df5a74164f9086a671d0ab852231810a895",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/worldseed/module_types.gd.uid",
+      "blob_sha": "03a1361b4925d41e76da792ef55301355732ab69",
+      "sha256": "345931c20b8ba4a73c8524643d302349c2d6e67d36f4618b8d2e2b9b02500b14",
+      "github_blob_sha": "03a1361b4925d41e76da792ef55301355732ab69",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/worldseed/seed_renderer.gd",
+      "blob_sha": "e4b2e585ec851d261e77c0783890b6b07272b397",
+      "sha256": "881919d7410f5b7098996a812d327bae21dab9a5da59fb6cc6a5f7a8c8d161fc",
+      "github_blob_sha": "e4b2e585ec851d261e77c0783890b6b07272b397",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/worldseed/seed_renderer.gd.uid",
+      "blob_sha": "c4b0447f287d5415c4b2a60bca98f22651f21399",
+      "sha256": "887cc13f0d8515ca0eb17eb236e908bb654559efffd5e4c4d4ce9acdb30b0920",
+      "github_blob_sha": "c4b0447f287d5415c4b2a60bca98f22651f21399",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/worldseed/silhouette_tetra_mesher.gd",
+      "blob_sha": "49a300817a6a8aa5b76cb1c37d8eae2de5213827",
+      "sha256": "0276f90b56bc67cb0d44546b63f77217d236efd42859c49c985b1645fe786e5f",
+      "github_blob_sha": "49a300817a6a8aa5b76cb1c37d8eae2de5213827",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/worldseed/silhouette_tetra_mesher.gd.uid",
+      "blob_sha": "49b21945a498fc20eab642d496f0903c615dee4b",
+      "sha256": "f507b0d9a91780966ef179ff861349721a9997e2221a72c5fff4dc8b870de9ab",
+      "github_blob_sha": "49b21945a498fc20eab642d496f0903c615dee4b",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/worldseed/tetrahedron.gd",
+      "blob_sha": "69d3adc284892c557946da282123102894459a94",
+      "sha256": "422eca31c86adb821a4225c91ab4932c2561f417eadc3c404d99e123fdaf6c22",
+      "github_blob_sha": "69d3adc284892c557946da282123102894459a94",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/worldseed/tetrahedron.gd.uid",
+      "blob_sha": "742fe29628d51ff582bebf5a8d6d1a5a776c4771",
+      "sha256": "9a22a04481a1a58e1795673ab1ec2484a07a419237177d6e1ca77268a771f423",
+      "github_blob_sha": "742fe29628d51ff582bebf5a8d6d1a5a776c4771",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/worldseed/vertex.gd",
+      "blob_sha": "7e888882072bafd68aaf79f3396824e4a4aec587",
+      "sha256": "060cb855b5d7f1e3189203f7c625d959836c388c6a409260cef9bb30136843dd",
+      "github_blob_sha": "7e888882072bafd68aaf79f3396824e4a4aec587",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/worldseed/vertex.gd.uid",
+      "blob_sha": "6e4bb1f60b93a9bbfb947d87b19d9b9b7c7607de",
+      "sha256": "4c73277c4395530700c4b1c6066e40eb5a4896ae8a14ff0a44fcab0eaca340bb",
+      "github_blob_sha": "6e4bb1f60b93a9bbfb947d87b19d9b9b7c7607de",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/worldseed/vertex_lattice_growth.gd",
+      "blob_sha": "e3dec2b0aa6b923b612ff19f8dd6e59cbd0ce5d7",
+      "sha256": "da394b03a6ed7d9d74b63be1b4c52fa32136f3fa6c4ec36c566b92260fdab9a5",
+      "github_blob_sha": "e3dec2b0aa6b923b612ff19f8dd6e59cbd0ce5d7",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/worldseed/vertex_lattice_growth.gd.uid",
+      "blob_sha": "463a03e48734a6cab78f61626c64c1db18a8f2ea",
+      "sha256": "4d83b028c6f1000abaccf6af75be5219d8ad66b66b521464b2c6966be17ad12c",
+      "github_blob_sha": "463a03e48734a6cab78f61626c64c1db18a8f2ea",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/worldseed/world_event.gd",
+      "blob_sha": "36a79c4d69639b079bad5393ac437f4bdf079cdb",
+      "sha256": "00f2cd7817a45b7ebb69756b2f293fb9d1fbbce95f8f9d6da17d1e9741576ded",
+      "github_blob_sha": "36a79c4d69639b079bad5393ac437f4bdf079cdb",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/worldseed/world_event.gd.uid",
+      "blob_sha": "67c9de46054f650909cc75a1c0e42db32491395e",
+      "sha256": "6ac19f375a8e0b7ec5d7224aa2951a84b69f8d24fd9531f1e4c2971fc742393b",
+      "github_blob_sha": "67c9de46054f650909cc75a1c0e42db32491395e",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/worldseed/world_seed.gd",
+      "blob_sha": "12bd67d0e680dc555250db1d7e8b66651ba0e766",
+      "sha256": "789eef990e6e0a11604fc3eb1421abce7154d05fdadecd2f7250c23ebd3f347d",
+      "github_blob_sha": "12bd67d0e680dc555250db1d7e8b66651ba0e766",
+      "matches": true
+    },
+    {
+      "path": "godot/GERTECH_Aqua_Workshop/worldseed/world_seed.gd.uid",
+      "blob_sha": "a9a8ea7e8ef8a66fb2c9a63a1dc026c7775322ca",
+      "sha256": "74df955e28e0f3775775870e7fcd0944031dd69155320d7a3775b041228c6bf4",
+      "github_blob_sha": "a9a8ea7e8ef8a66fb2c9a63a1dc026c7775322ca",
+      "matches": true
+    }
+  ]
+}

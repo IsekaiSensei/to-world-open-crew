@@ -1,3 +1,5 @@
+> **Additional independent engine probe — CHATGPT-TO-DOG-SOLAR-DRAGON-SHARED-MAP-20261111, November 11, 2026:** The complete private premium ZIP matches the published source, but Godot **4.6.3** headless import/startup reported mixed-indentation parse errors at **scripts/workshop.gd:369** and **worldseed/world_seed.gd:212**. **Godot 4.7 remains untested.** See the [window audit and exact logs](handoffs/TO_DOG_SOLAR_DRAGON_SHARED_MAP_WINDOW_2026-11-11.md). No source logic was changed, and no second project copy was published. Earlier contributor test statements below describe their own sessions.
+
 # GERTECH / Aqua Workshop + Forge Loft — CURRENT BUILD / SOURCE HANDOFF
 **Date:** 2026-11-11 (Pacific)  
 **Contributing window:** ChatGPT — Steam Deck / j5create SD reader troubleshooting window; owner-requested Godot cross-window publication.  
@@ -134,3 +136,13 @@
 **Production/canon scope boundary:** This conversation's **November 9** meta-routing updates are **historical** under the owner's **November 10** corrected film entrance, currently recorded at the top of [CHAT.md](https://github.com/IsekaiSensei/chat.work.open.ai/blob/main/CHAT.md). Do not reactivate that old Agua-V2 film queue from a Godot development handoff or edit movie orders here. The six-paragraph GERTECH MORGUE original remains protected verbatim source material and visual inspiration; **not a Godot implementation or new playable scene**. Game priorities remain the approved [graphics-first direction](GERTECH_WORKSHOP_GRAPHICS_FIRST_OWNER_DIRECTION_2026-11-11.md), one source tree, unchanged Foundry mechanics and WorldSeed state, and the [single shared brainstorm](https://github.com/IsekaiSensei/chat.work.open.ai/blob/main/brainstorm/GERTECH_SHARED_BRAINSTORM_2026-11-10.md) for future ideas.
 
 **Next integration work:** A real Godot 4.7 GL Compatibility import/run using owner-controlled private original GLBs, test visual profiles `0–3`, inspect workshop/pressure glass/crystal and metal scale, exercise 10×20 Foundry input/output material ledger, WorldSeed save/reload/legacy migration and F9 backup/reset, record logs/screenshots/FPS. Check source commits and checksum before any cherry-pick; only merge specific verified bug fixes into [the existing source tree](../godot/GERTECH_Aqua_Workshop/). **No recipient/Grok acknowledgment is implied by posting this note.**
+
+## Additional contributor — CHATGPT-TO-DOG-SOLAR-DRAGON-SHARED-MAP-20261111 — 2026-11-11
+
+The solar-android/Dragon/shared-map window independently retrieved the premium package and verified its SHA-256, 82-entry CRC, three Python geometry checks and all 53 non-asset source/document/UID blob hashes against commit 453107e10352882b854a2e90651d17bb2ea2dd09.
+
+This environment has Godot 4.6.3. Actual headless editor import and a two-frame main-scene start both reported the workshop.gd:369 mixed-indentation parse error. An explicit WorldSeed script check reported the same error type at world_seed.gd:212. The import/start processes returned zero despite script errors; they are **FAIL**, not startup passes. The explicit WorldSeed check exited 1. Configured Godot 4.7 and visual/gameplay/save-load/FPS tests remain **NOT RUN**.
+
+No source fixes or code changes were made here. The existing source publication by the SD-reader window is preserved; source files were compared rather than uploaded again. This window's preexisting contributions were design/provenance/World Book records, not a newer Godot patch.
+
+[Complete scoped contribution, current package and test evidence](handoffs/TO_DOG_SOLAR_DRAGON_SHARED_MAP_WINDOW_2026-11-11.md). Shared design discussion remains in the [existing brainstorm](https://github.com/IsekaiSensei/chat.work.open.ai/blob/main/brainstorm/GERTECH_SHARED_BRAINSTORM_2026-11-10.md). Film instructions remain untouched.

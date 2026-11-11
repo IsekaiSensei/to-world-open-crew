@@ -1,0 +1,3 @@
+PASS — 6 nondegenerate tetrahedra per occupied voxel
+PASS — shared faces conform across x, y and z neighbors
+PASS — no nonmanifold triangle or artificial boundary on shared faces
