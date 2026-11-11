@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://djarjee4ktj0"]
+
+[ext_resource type="Script" uid="uid://c2w03ubcvoilj" path="res://scripts/workshop.gd" id="1_workshop"]
+
+[node name="GERTECH_AQUA_WORKSHOP" type="Node3D" unique_id=1438246153]
+script = ExtResource("1_workshop")
