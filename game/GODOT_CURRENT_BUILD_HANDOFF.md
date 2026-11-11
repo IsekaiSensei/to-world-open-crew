@@ -99,3 +99,18 @@ Original inspected owner ZIP (9:54 a.m.):
 - **Shared coordination, not duplicate brainstorm:** [single living brainstorm](https://github.com/IsekaiSensei/chat.work.open.ai/blob/main/brainstorm/GERTECH_SHARED_BRAINSTORM_2026-11-10.md) contains this window's dated source note; [issue #12](https://github.com/IsekaiSensei/chat.work.open.ai/issues/12) is the graphics and conversion test thread. Source art stays privately in Drive under the existing [asset manifest](../godot/GERTECH_Aqua_Workshop/ASSET_SOURCE_MANIFEST.md). Film/Meta orders unchanged.
 
 **NEXT:** Other ChatGPT/Grok Godot windows should inspect newest actual source before editing; conduct a real Godot 4.7 GL Compatibility import/parse/playtest; compare approved art and joint anatomy; then optionally prototype a *visual-only* canister+lattice bend with clear cause-to-effect and performance/quality-profile verification. Only introduce a stock/WorldSeed effect if explicitly specified and material-accounted. This entry is **PUBLISHED DESIGN HANDOFF**, not a new gameplay build.
+
+
+## 2026-11-11 — Godot 4.7.2 live parser error: mixed indentation
+
+**Owner-provided live Godot screenshot:** Godot 4.7.2 stable, `workshop.tscn`, script debugger showing `Parser Error: Used space character for indentation instead of tab as used before in the file` at `res://scripts/workshop.gd:372`, with 19 error count on screen. **This is a real engine parser rejection**, contradicting any claim that the premium ZIP is engine-QC ready. Screenshot is evidence of a failure, **not** a successful run. The project may have more parse issues after the indentation blockers are removed.
+
+**NON-BEHAVIORAL SOURCE REPAIRS PUSHED TO GITHUB MAIN (source whitespace only, no statement/token changes):**
+- `scripts/workshop.gd` lines 370–377 and 380–392: 21 space-indented lines → tabs. Commit [33e2638](https://github.com/IsekaiSensei/to-world-open-crew/commit/33e2638f33a1feadd92fd1f1a7e14bb1261e0f6e).
+- `worldseed/world_seed.gd` lines 213–222: 10 lines → tabs. Commit [8bb6971](https://github.com/IsekaiSensei/to-world-open-crew/commit/8bb6971096c0e44d569bc2e2120210b6926f63d3).
+- `workshop/inventory.gd` lines 69–84: 16 lines → tabs. Commit [f8309d7](https://github.com/IsekaiSensei/to-world-open-crew/commit/f8309d7b9f0717f04ade841902d22ff5cef50dbe).
+- `worldseed/seed_renderer.gd` lines 81–189 (105 lines with space indentation) → tabs. Commit [06730aa](https://github.com/IsekaiSensei/to-world-open-crew/commit/06730aa0f51d9d60206d7e6707581d65d2f115e7).
+
+**VERIFIED:** Re-fetched each corrected public GDScript from GitHub. All four have exclusively tab indentation in operative code; code without leading whitespace byte-for-byte unchanged. Six additional game scripts were spot-checked; dedicated Foundry skin scripts use spaces consistently within themselves and need no conversion. **Not verified:** headless Godot import/run, complete syntax/typing after these first parser issues, or Steam Deck FPS.
+
+**IMPORTANT:** The existing full private Drive ZIP `GERTECH_Aqua_Workshop_Premium_Graphics_First_2026-11-11.zip` **was NOT modified by these GitHub changes**. The Steam Deck extraction remains old until only the 4 named .gd scripts are updated in-place or a future full tested release is produced. User says he deleted most older versions; do not ask for repeated old copies or delete the current working directory/saves. Preserve only the owner's current extracted project, patch these 4 source files into the same relative locations, and rerun until actual parser result is known. Avoid multiplying versioned ZIPs just to change indentation.
