@@ -1,4 +1,7 @@
 # GERTECH Aqua Workshop — PUBLIC SOURCE / PRIVATE ASSET MANIFEST
+
+> **CURRENT OWNER PACKAGE (Nov 11, later than the archive listed below):** [GERTECH_Aqua_Workshop_FULL_RESTORED_Dig_Dog_UI_2026-11-11.zip](https://drive.google.com/file/d/1oESoWFwdAPD_9NT0c-66YyTGZXPJGv3c/view?usp=drivesdk) — **82 entries**, 1,535,536 bytes, SHA-256 `771b63f2314586319a0fb6af5edb78e20babc49863856309a7011603439b05ff`. This is the **latest package identified in the current handoff**. Relative to the original graphics-first package, the final source corrected **DIG DOG** UI labels and documentation; older 82-file Premium Graphics First (SHA `cc8c3ed6...`, below) remains the historical source/provenance record, not the package to install over the current game. Preserve private GLBs/textures; do not use the incomplete 54-file FIXED ZIP. Prior zip/static tests do **not** establish a Godot runtime PASS. [Current game handoff](https://github.com/IsekaiSensei/to-world-open-crew/blob/main/game/GODOT_CURRENT_BUILD_HANDOFF.md).
+
 **Source:** Owner's 2026-11-11 premium graphics-first package. Public repository contains real source files and owner-safe generated neutral textures, not a reconstructed game.
 **Verified source archive:** `GERTECH_Aqua_Workshop_Premium_Graphics_First_2026-11-11.zip`
 **SHA-256:** `cc8c3ed6cb41ecac102715b06256ebb9630aeacb4507b6370822d8ca27124276`
