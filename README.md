@@ -1,6 +1,8 @@
 # TO WORLD — UNIVERSAL GAME STANDARDS
 
-**October 30, 2026 — ACTIVE WORK RESET.**
+**Current build:** [GERTECH Aqua Workshop + Forge Loft](godot/GERTECH_Aqua_Workshop/) · [current build handoff and actual validation status](game/GODOT_CURRENT_BUILD_HANDOFF.md). Film production is selected by the [native Pocket Workshop router](https://docs.google.com/document/d/1JNQmXdWkaHTYkpcnsr7OC7lbLrGqf4OrsN-9QFQIcT4/edit).
+
+**October 30, 2026 — HISTORICAL STANDARDS RESET.**
 
 All old scripts, batch productions, rendered-story assignments and standalone game prototypes are **retired from the current branch**. They can be recovered through Git history; this reset does not delete or move Google Drive artwork, video or offline archives.
 
