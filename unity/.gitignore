@@ -1,0 +1,48 @@
+# Unity generated (paths are relative to this unity/ folder)
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+InitTestScene*.unity*
+
+# IDE / OS
+.vs/
+.idea/
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+.DS_Store
+Thumbs.db
+
+# Unity-generated solution at this folder root only
+# (keep tools/compile-check/GertechCompileCheck.csproj)
+/*.csproj
+/*.sln
+/*.unityproj
+*.dotSettings
+*.csproj.user
+
+# Builds and packages
+*.apk
+*.aab
+*.exe
+*.app
+ExportedObj/
+*.unitypackage
+sysinfo.txt
+
+# Headless compile-check artifacts
+tools/compile-check/bin/
+tools/compile-check/obj/
