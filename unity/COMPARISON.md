@@ -68,3 +68,10 @@ Record each measurement run here (date in America/Los_Angeles, operator, build h
 | Date (PT) | Metric | Engine | Result | Raw notes / link |
 |---|---|---|---|---|
 | TODO | TODO | TODO | TODO | TODO |
+
+## Look pass (qualitative — not a measured metric)
+
+| Topic | Godot (Continuity, 2026-11-14) | Unity (this tree) | Roblox | Notes |
+|---|---|---|---|---|
+| Look pass | Procedural `graphics/reference_look_pass/` with shaders `gold_chrome`, `edge_glow`, `crystal_nebula`, `wormhole_torus` (filaments only). Shots in `/workspace/godot_continuity/shots/look_pass/` (hall, helix, spiral chain, elemental crystals, block + triangle, frames/progression, growth, Voronoi wall, plus sequences). Layout origins in `reference_look_pass.gd`. | Those four shaders ported to Shader Graph-free HLSL in `Assets/Shaders` (URP + Built-in fallback). Wormhole torus also samples `_CameraOpaqueTexture` / GrabPass for refraction (unverified in Editor). `ComparisonCameraRig` uses the same named view poses and FOV 66 as Godot's shot harness. Look pieces placed at the same hall origins. Packed PNG assist still used as plates. | TODO | No side-by-side pixel or frame-time measurements were taken. Do not invent numbers. Godot files were not modified. |
+

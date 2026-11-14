@@ -118,6 +118,7 @@ namespace UnityEngine
     {
         public float x, y, z, w;
         public static Quaternion identity { get { return new Quaternion { w = 1f }; } }
+        public static Quaternion AngleAxis(float angle, Vector3 axis) { return Euler(0f, angle, 0f); }
         public static Quaternion Euler(float x, float y, float z) { return identity; }
         public static Quaternion LookRotation(Vector3 forward) { return identity; }
         public static Quaternion LookRotation(Vector3 forward, Vector3 upwards) { return identity; }
@@ -514,6 +515,7 @@ namespace UnityEngine
         public const float PI = 3.14159274f;
         public const float Deg2Rad = PI / 180f;
         public const float Rad2Deg = 180f / PI;
+        public static float Pow(float f, float p) { return (float)System.Math.Pow(f, p); }
         public static float Max(float a, float b) { return a > b ? a : b; }
         public static int Max(int a, int b) { return a > b ? a : b; }
         public static float Min(float a, float b) { return a < b ? a : b; }

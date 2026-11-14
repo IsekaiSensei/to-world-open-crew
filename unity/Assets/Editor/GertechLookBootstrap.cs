@@ -88,6 +88,14 @@ namespace Gertech.EditorTools
             var lookRoot = new GameObject("Look");
             if (hub != null) lookRoot.transform.SetParent(hub, false);
 
+            var hallFloor = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            hallFloor.name = "Look_Hall_Floor";
+            hallFloor.transform.SetParent(lookRoot.transform, false);
+            hallFloor.transform.position = new Vector3(0f, -0.04f, 0f);
+            hallFloor.transform.localScale = new Vector3(GertechLookLayout.HallWidth, 0.08f, GertechLookLayout.HallDepth);
+            var hallFloorRenderer = hallFloor.GetComponent<MeshRenderer>();
+            if (hallFloorRenderer != null) hallFloorRenderer.sharedMaterial = space;
+
             // Sky / backdrop plates — PNG assist used directly.
             if (starfield != null)
             {
@@ -115,6 +123,7 @@ namespace Gertech.EditorTools
 
             if (portal != null)
             {
+                portal.transform.position = GertechLookLayout.WormholeOrigin;
                 var visual = DnaWormholeHelixVisual.Attach(portal);
                 visual.Palette = palette;
                 visual.VortexPlate = ref03 != null ? ref03 : ref07;
@@ -123,7 +132,7 @@ namespace Gertech.EditorTools
 
             var blockGo = new GameObject("ModularCrystalBlock");
             blockGo.transform.SetParent(lookRoot.transform, false);
-            blockGo.transform.localPosition = new Vector3(0f, 1.1f, 2.2f);
+            blockGo.transform.position = GertechLookLayout.BlocksOrigin + new Vector3(0f, 1.1f, 0f);
             var block = blockGo.AddComponent<CrystalBlockBuilder>();
             block.Palette = palette;
             block.Nebula = nebula != null ? nebula : ref14;
@@ -132,8 +141,8 @@ namespace Gertech.EditorTools
 
             var triangleGo = new GameObject("NebulaTriangleModule");
             triangleGo.transform.SetParent(lookRoot.transform, false);
-            triangleGo.transform.localPosition = new Vector3(6.5f, 1.2f, 1.5f);
-            triangleGo.transform.localRotation = Quaternion.Euler(0f, -25f, 0f);
+            triangleGo.transform.position = GertechLookLayout.BlocksOrigin + new Vector3(0f, 1.2f, -2.4f);
+            triangleGo.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
             var triangle = triangleGo.AddComponent<TriangleModuleBuilder>();
             triangle.Palette = palette;
             triangle.Nebula = nebula != null ? nebula : ref14;
@@ -141,15 +150,16 @@ namespace Gertech.EditorTools
 
             var elementalGo = new GameObject("ElementalPlatonicCrystals");
             elementalGo.transform.SetParent(lookRoot.transform, false);
-            elementalGo.transform.localPosition = new Vector3(0f, 2.2f, 6.5f);
+            elementalGo.transform.position = GertechLookLayout.ElementsOrigin;
             var row = elementalGo.AddComponent<ElementalCrystalRow>();
             row.Sheet = ref11;
+            row.Spacing = 3.4f;
             row.Rebuild();
 
             CreateFlipbook(lookRoot.transform, "Flipbook_REF12_CrystalToAndroid", ref12,
-                new Vector3(-6.5f, 2.4f, -2.5f), new Vector3(0f, 25f, 0f), new Vector2(3.2f, 2.7f));
+                GertechLookLayout.GrowthOrigin + new Vector3(0f, 1.6f, 0f), new Vector3(0f, 180f, 0f), new Vector2(3.2f, 2.7f));
             CreateFlipbook(lookRoot.transform, "Flipbook_REF13_HelixPlatonic", ref13,
-                new Vector3(6.5f, 2.4f, -2.5f), new Vector3(0f, -25f, 0f), new Vector2(3.2f, 2.7f));
+                GertechLookLayout.ProgressionOrigin + new Vector3(0f, 3.4f, 0f), new Vector3(0f, 180f, 0f), new Vector2(3.6f, 3.0f));
 
             var ref15 = LoadTex(ArtRefs + "/batch2/GERTECH_REF_15_hex_honeycomb_cyan_spiral.png");
             var ref16 = LoadTex(ArtRefs + "/batch2/GERTECH_REF_16_gold_silver_ornate_hex_spiral.png");
@@ -177,6 +187,35 @@ namespace Gertech.EditorTools
             PlacePlate(lookRoot.transform, "Plate_REF25_WordlessModular", ref25, new Vector3(-4f, 4.6f, -14f), new Vector3(0f, 10f, 0f), new Vector2(3.6f, 3.6f));
             PlacePlate(lookRoot.transform, "Plate_REF26_AssembledCluster", ref26, new Vector3(4f, 4.6f, -14f), new Vector3(0f, -10f, 0f), new Vector2(3.2f, 3.2f));
 
+            var ref27 = LoadTex(ArtRefs + "/batch2/GERTECH_REF_27_crystal_block_world_hall.png");
+            var ref28 = LoadTex(ArtRefs + "/batch2/GERTECH_REF_28_galaxy_crystal_machine_cluster.png");
+            var ref29 = LoadTex(ArtRefs + "/batch2/GERTECH_REF_29_ether_relay_network.png");
+            var ref30 = LoadTex(ArtRefs + "/batch2/GERTECH_REF_30_ether_growth_progression_5x5.png");
+            var ref31 = LoadTex(ArtRefs + "/batch2/GERTECH_REF_31_ether_galaxy_node_interior.png");
+            var ref32 = LoadTex(ArtRefs + "/batch2/GERTECH_REF_32_ether_mana_flow_lattice.png");
+            var ref33 = LoadTex(ArtRefs + "/batch2/GERTECH_REF_33_ether_dyson_orbital_relay.png");
+            var ref34 = LoadTex(ArtRefs + "/batch2/GERTECH_REF_34_gdr07_wormhole_icosahedron.png");
+            var ref35 = LoadTex(ArtRefs + "/batch2/GERTECH_REF_35_gdr07_fleet_wormhole_cover.png");
+            PlacePlate(lookRoot.transform, "Plate_REF27_WorldHall", ref27, new Vector3(0f, 8f, -36f), new Vector3(0f, 0f, 0f), new Vector2(16f, 7.4f));
+            PlacePlate(lookRoot.transform, "Plate_REF28_MachineCluster", ref28, new Vector3(20f, 6f, -20f), new Vector3(0f, -30f, 0f), new Vector2(5f, 5f));
+            PlacePlate(lookRoot.transform, "Plate_REF29_EtherNetwork", ref29, new Vector3(-22f, 7f, 20f), new Vector3(0f, 150f, 0f), new Vector2(6.4f, 4.3f));
+            PlacePlate(lookRoot.transform, "Plate_REF30_EtherProgression", ref30, new Vector3(8f, 6.5f, -20f), new Vector3(0f, 20f, 0f), new Vector2(5.2f, 5.2f));
+            PlacePlate(lookRoot.transform, "Plate_REF31_EtherNode", ref31, new Vector3(20f, 7f, 16f), new Vector3(0f, -130f, 0f), new Vector2(3.8f, 5.6f));
+            PlacePlate(lookRoot.transform, "Plate_REF32_ManaLattice", ref32, new Vector3(-8f, 7f, 20f), new Vector3(0f, 180f, 0f), new Vector2(3.8f, 5.6f));
+            PlacePlate(lookRoot.transform, "Plate_REF33_DysonRelay", ref33, new Vector3(32f, 7f, 0f), new Vector3(0f, -90f, 0f), new Vector2(6.4f, 4.3f));
+            PlacePlate(lookRoot.transform, "Plate_REF34_WormholeIcosa", ref34, new Vector3(-22f, 8f, 10f), new Vector3(0f, 90f, 0f), new Vector2(5.2f, 5.2f));
+            PlacePlate(lookRoot.transform, "Plate_REF35_FleetWormholeCover", ref35, new Vector3(0f, 10f, 36f), new Vector3(0f, 180f, 0f), new Vector2(8f, 4.5f));
+
+            GoldenSpiralChain.Build(lookRoot.transform, GertechLookLayout.SpiralChainOrigin, palette);
+            FramesInSpheres.Build(lookRoot.transform, GertechLookLayout.SpheresOrigin, palette);
+            PlacePlate(lookRoot.transform, "Look_Voronoi_Vortex_Wall_Panel",
+                ref20 != null ? ref20 : ref06,
+                GertechLookLayout.VoronoiPanelOrigin, new Vector3(0f, 90f, 0f), new Vector2(10f, 7.3f));
+            PlacePlate(lookRoot.transform, "Look_Golden_Foam_Lattice_Wall_Panel",
+                ref08, GertechLookLayout.FoamPanelOrigin, new Vector3(0f, 90f, 0f), new Vector2(10f, 7.3f));
+
+            ComparisonCameraRig.Build(lookRoot.transform, camera);
+
             var assemblyNebula = nebula != null ? nebula : ref14;
             CrystalBlockGrid.Build(lookRoot.transform, "Assembly_CarHullSection",
                 ModularAssemblyPresets.CarHullSection(), new Vector3(-9.5f, 0.1f, -5.5f), palette, assemblyNebula, 0.4f, false);
@@ -189,10 +228,11 @@ namespace Gertech.EditorTools
 
             var playerAnchor = new GameObject("PlayerAnchor");
             playerAnchor.transform.SetParent(lookRoot.transform, false);
-            playerAnchor.transform.localPosition = new Vector3(0f, 0f, -1.5f);
+            playerAnchor.transform.position = new Vector3(0f, 0.45f, 31.8f);
             Transform forgeTf = hub != null ? FindChild(hub, "Forge") : null;
             Transform tetraTf = hub != null ? FindChild(hub, "TetraForge") : null;
-            var guide = GuideCharacter.Build(lookRoot.transform, new Vector3(1.6f, 0f, 0.4f), palette, null, playerAnchor.transform);
+            var guideSheet = LoadTex(ArtRefs + "/characters/GERTECH_WORKSHOP_GUIDE_STANDIN_PROVISIONAL_REFERENCE_11.png");
+            var guide = GuideCharacter.Build(lookRoot.transform, new Vector3(1.6f, 0f, 30.4f), palette, null, playerAnchor.transform, guideSheet);
             guide.PlayHint(0, forgeTf, tetraTf, portal != null ? portal.transform : null);
 
             // Tint station primitives that already exist under the hub.
@@ -212,6 +252,9 @@ namespace Gertech.EditorTools
                     if (r.GetComponentInParent<CrystalBlockVehicle>() != null) continue;
                     if (r.GetComponentInParent<StarshipHull>() != null) continue;
                     if (r.GetComponentInParent<GuideCharacter>() != null) continue;
+                    if (r.GetComponentInParent<LookSpin>() != null) continue;
+                    if (r.GetComponentInParent<ComparisonCameraRig>() != null) continue;
+                    if (r.gameObject.name.StartsWith("Look_")) continue;
                     if (r.gameObject.name.StartsWith("Plate_") || r.gameObject.name.StartsWith("Sky_") || r.gameObject.name.StartsWith("Flipbook_"))
                         continue;
                     // Alternate gold / chrome on workshop station blocks.

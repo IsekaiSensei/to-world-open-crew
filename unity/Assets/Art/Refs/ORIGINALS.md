@@ -74,3 +74,18 @@ Drive follow-up plates (originals in `/workspace/gertech_shared_refs/visual_2026
 | batch2/GERTECH_REF_25_wordless_modular_build_sheet.png | 2000x2000 | 497,906 | 512x512 |
 | batch2/GERTECH_REF_26_assembled_modular_cluster.png | 1000x1000 | 142,799 | 512x512 |
 
+Shader/camera pass plates (512 px packed; originals in `/workspace/gertech_shared_refs/visual_2026-11-14/` for 27/28 and `visual_2026-11-14_batch2/` for 29–35 and the guide stand-in):
+
+| File | Original px | Motif |
+|---|---|---|
+| batch2/GERTECH_REF_27_crystal_block_world_hall.png | 1624x750 | Hall / room reference |
+| batch2/GERTECH_REF_28_galaxy_crystal_machine_cluster.png | 750x749 | Machine cluster |
+| batch2/GERTECH_REF_29_ether_relay_network.png | 1168x784 | Ether network |
+| batch2/GERTECH_REF_30_ether_growth_progression_5x5.png | 1254x1254 | 5×5 progression |
+| batch2/GERTECH_REF_31_ether_galaxy_node_interior.png | 784x1168 | Node interior |
+| batch2/GERTECH_REF_32_ether_mana_flow_lattice.png | 784x1168 | Mana-flow lattice |
+| batch2/GERTECH_REF_33_ether_dyson_orbital_relay.png | 1168x784 | Dyson / orbital relay |
+| batch2/GERTECH_REF_34_gdr07_wormhole_icosahedron.png | 1600x1600 | Wormhole icosahedron |
+| batch2/GERTECH_REF_35_gdr07_fleet_wormhole_cover.png | 2048x1152 | Fleet cover (has labels) |
+| characters/GERTECH_WORKSHOP_GUIDE_STANDIN_PROVISIONAL_REFERENCE_11.png | 1024x1536 | Provisional guide stand-in |
+

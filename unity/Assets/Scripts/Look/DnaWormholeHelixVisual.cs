@@ -4,10 +4,12 @@ using UnityEngine;
 namespace Gertech.Look
 {
     /// <summary>
-    /// Visual for the DNA wormhole helix: a torus of distortion (glass / chrome ring
-    /// with an optional vortex plate) and a double helix inside. Attach to the same
-    /// object as <see cref="DnaWormholeHelixPortal"/> or a child of it.
-    /// True screen-space refraction is not included; the ring is a glass/chrome stand-in.
+    /// Visual for the DNA wormhole helix: a torus of distortion (Gertech/WormholeTorus
+    /// shader with filament streaks plus screen-space refraction via
+    /// _CameraOpaqueTexture in URP, or GrabPass in Built-in) and a double helix inside.
+    /// Attach to the same object as <see cref="DnaWormholeHelixPortal"/> or a child of it.
+    /// URP refraction requires the pipeline asset's Opaque Texture to be enabled;
+    /// that has not been verified in the Unity Editor on this box.
     /// </summary>
     public sealed class DnaWormholeHelixVisual : MonoBehaviour
     {
@@ -69,13 +71,13 @@ namespace Gertech.Look
             rootGo.transform.SetParent(transform, false);
             spinRoot = rootGo.transform;
 
-            var glass = GertechMaterialFactory.CrystalGlass(palette);
+            var wormhole = GertechMaterialFactory.WormholeTorus(palette);
             var chrome = GertechMaterialFactory.Chrome(palette);
             var gold = GertechMaterialFactory.Gold(palette);
             var cyan = GertechMaterialFactory.CyanEdge(palette);
 
             var torus = GertechProcMesh.Torus(torusRadius, torusTube, 16, 32);
-            GertechProcMesh.MeshObject("DistortionTorus", torus, glass, spinRoot);
+            GertechProcMesh.MeshObject("DistortionTorus", torus, wormhole, spinRoot);
 
             var inner = GertechProcMesh.Torus(torusRadius, torusTube * 0.45f, 12, 24);
             GertechProcMesh.MeshObject("ChromeRing", inner, chrome, spinRoot);

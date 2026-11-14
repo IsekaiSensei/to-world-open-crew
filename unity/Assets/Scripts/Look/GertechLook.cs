@@ -34,10 +34,14 @@ namespace Gertech.Look
         public const string NebulaMagentaHex = "#882DB4";
         // Warm-orange gold glow on REF_18 / REF_19 energized edges.
         public const string GoldGlowHex = "#DC7F03";
-        // Workshop Guide infinity-clip accent. Provisional: the turnaround
-        // sheet was not in the delivered batch-2 attachments, so this was
-        // not sampled from that sheet.
-        public const string InfinityBlueHex = "#3A7DFF";
+        // Workshop Guide infinity-clip / core accent. Sampled from the chest-core
+        // highlights of the provisional stand-in sheet
+        // GERTECH_REFERENCE_11_GOLD_BLUE_CORE_ASSEMBLY (red-haired lattice
+        // fairy, not Ryan's blonde gold-dress turnaround). Re-sample when
+        // the real Workshop Guide sheet is found.
+        public const string InfinityBlueHex = "#52A5FF";
+        // Gold lattice of the same provisional stand-in (dress / wire).
+        public const string GuideLatticeGoldHex = "#BE8258";
 
         public static readonly Color SpaceBlack = Hex(SpaceBlackHex);
         public static readonly Color SpaceNavy = Hex(SpaceNavyHex);
@@ -51,6 +55,7 @@ namespace Gertech.Look
         public static readonly Color NebulaMagenta = Hex(NebulaMagentaHex);
         public static readonly Color GoldGlow = Hex(GoldGlowHex);
         public static readonly Color InfinityBlue = Hex(InfinityBlueHex);
+        public static readonly Color GuideLatticeGold = Hex(GuideLatticeGoldHex);
 
         public static Color Hex(string value)
         {
@@ -87,6 +92,7 @@ namespace Gertech.Look
         [SerializeField] Color nebulaMagenta = GertechLook.NebulaMagenta;
         [SerializeField] Color goldGlow = GertechLook.GoldGlow;
         [SerializeField] Color infinityBlue = GertechLook.InfinityBlue;
+        [SerializeField] Color guideLatticeGold = GertechLook.GuideLatticeGold;
 
         public Color SpaceBlack => spaceBlack;
         public Color SpaceNavy => spaceNavy;
@@ -100,6 +106,7 @@ namespace Gertech.Look
         public Color NebulaMagenta => nebulaMagenta;
         public Color GoldGlow => goldGlow;
         public Color InfinityBlue => infinityBlue;
+        public Color GuideLatticeGold => guideLatticeGold;
 
         public void ResetToSampledDefaults()
         {
@@ -115,6 +122,7 @@ namespace Gertech.Look
             nebulaMagenta = GertechLook.NebulaMagenta;
             goldGlow = GertechLook.GoldGlow;
             infinityBlue = GertechLook.InfinityBlue;
+            guideLatticeGold = GertechLook.GuideLatticeGold;
         }
     }
 }

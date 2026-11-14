@@ -12,16 +12,17 @@ namespace Gertech.Core.Guide
     }
 
     /// <summary>
-    /// Stand-in for the Workshop Guide (player's guide). Visual target is the
-    /// gold-dress / crystal-lattice / infinity-clip turnaround in
-    /// Assets/Art/Refs/characters when that sheet is on disk. Named only
-    /// "Workshop Guide" — no invented name.
+    /// Stand-in for the Workshop Guide (player's guide). The gold-dress /
+    /// infinity-clip turnaround is still missing; a provisional sheet
+    /// (GERTECH_REFERENCE_11_GOLD_BLUE_CORE_ASSEMBLY) may be shown as a
+    /// clearly marked visual target. Named only "Workshop Guide".
     /// </summary>
     public sealed class GuideCharacter : MonoBehaviour
     {
         public const string DisplayName = GuideDialogue.CharacterLabel;
 
         [SerializeField] GertechLookPalette palette;
+        [SerializeField] Texture standInSheet;
         [SerializeField] GuideDialogue dialogue;
         [SerializeField] Transform player;
         [SerializeField] Transform pointTarget;
@@ -33,6 +34,12 @@ namespace Gertech.Core.Guide
 
         Transform built;
         Transform pointer;
+
+        public Texture StandInSheet
+        {
+            get { return standInSheet; }
+            set { standInSheet = value; }
+        }
 
         public GuideDialogue Dialogue
         {
@@ -55,7 +62,7 @@ namespace Gertech.Core.Guide
         {
             if (built != null) Object.Destroy(built.gameObject);
 
-            var lattice = GertechMaterialFactory.CrystalLattice(palette);
+            var lattice = GertechMaterialFactory.GuideLattice(palette);
             var gold = GertechMaterialFactory.Gold(palette);
             var accent = GertechMaterialFactory.InfinityAccent(palette);
             var chrome = GertechMaterialFactory.Chrome(palette);
@@ -94,6 +101,16 @@ namespace Gertech.Core.Guide
 
             pointer = PlaceBox(built, "Pointer", new Vector3(0.45f, 1.35f, 0.15f), new Vector3(0.06f, 0.06f, 0.7f), accent).transform;
             pointer.gameObject.SetActive(false);
+
+            if (standInSheet != null)
+            {
+                var plate = GameObject.CreatePrimitive(PrimitiveType.Quad);
+                plate.name = "ProvisionalStandInSheet";
+                plate.transform.SetParent(built, false);
+                plate.transform.localPosition = new Vector3(0f, 1.6f, -0.7f);
+                plate.transform.localScale = new Vector3(1.15f, 1.7f, 1f);
+                ApplyMat(plate, GertechMaterialFactory.UnlitPlate(standInSheet, Color.white, "Workshop Guide Provisional Stand-In"));
+            }
         }
 
         public void WaitNear(Transform who)
@@ -192,7 +209,8 @@ namespace Gertech.Core.Guide
             Vector3 localPosition,
             GertechLookPalette palette,
             GuideDialogue dialogue,
-            Transform player)
+            Transform player,
+            Texture standInSheet = null)
         {
             var go = new GameObject(DisplayName);
             go.transform.SetParent(parent, false);
@@ -201,6 +219,7 @@ namespace Gertech.Core.Guide
             guide.palette = palette;
             guide.dialogue = dialogue != null ? dialogue : GuideDialogue.CreateDefaultOnboarding();
             guide.player = player;
+            guide.standInSheet = standInSheet;
             guide.Rebuild();
             return guide;
         }

@@ -125,5 +125,67 @@ namespace Gertech.Look
             if (norms == null || norms.Length == 0) mesh.RecalculateNormals();
             return mesh;
         }
+
+        public static Mesh Tetrahedron(float radius)
+        {
+            float a = radius;
+            var verts = new[]
+            {
+                new Vector3(a, a, a),
+                new Vector3(a, -a, -a),
+                new Vector3(-a, a, -a),
+                new Vector3(-a, -a, a)
+            };
+            var tris = new[] { 0, 2, 1, 0, 1, 3, 0, 3, 2, 1, 2, 3 };
+            return FinishPoly("Tetrahedron", verts, tris);
+        }
+
+        public static Mesh Octahedron(float radius)
+        {
+            var verts = new[]
+            {
+                new Vector3(radius, 0f, 0f), new Vector3(-radius, 0f, 0f),
+                new Vector3(0f, radius, 0f), new Vector3(0f, -radius, 0f),
+                new Vector3(0f, 0f, radius), new Vector3(0f, 0f, -radius)
+            };
+            var tris = new[]
+            {
+                0, 2, 4, 2, 1, 4, 1, 3, 4, 3, 0, 4,
+                0, 5, 2, 2, 5, 1, 1, 5, 3, 3, 5, 0
+            };
+            return FinishPoly("Octahedron", verts, tris);
+        }
+
+        public static Mesh Icosahedron(float radius)
+        {
+            float t = 1.6180339887f;
+            var raw = new[]
+            {
+                new Vector3(-1, t, 0), new Vector3(1, t, 0), new Vector3(-1, -t, 0), new Vector3(1, -t, 0),
+                new Vector3(0, -1, t), new Vector3(0, 1, t), new Vector3(0, -1, -t), new Vector3(0, 1, -t),
+                new Vector3(t, 0, -1), new Vector3(t, 0, 1), new Vector3(-t, 0, -1), new Vector3(-t, 0, 1)
+            };
+            var verts = new Vector3[raw.Length];
+            for (int i = 0; i < raw.Length; i++) verts[i] = raw[i].normalized * radius;
+            var tris = new[]
+            {
+                0,11,5, 0,5,1, 0,1,7, 0,7,10, 0,10,11,
+                1,5,9, 5,11,4, 11,10,2, 10,7,6, 7,1,8,
+                3,9,4, 3,4,2, 3,2,6, 3,6,8, 3,8,9,
+                4,9,5, 2,4,11, 6,2,10, 8,6,7, 9,8,1
+            };
+            return FinishPoly("Icosahedron", verts, tris);
+        }
+
+        static Mesh FinishPoly(string name, Vector3[] verts, int[] tris)
+        {
+            var mesh = new Mesh { name = name };
+            mesh.vertices = verts;
+            mesh.triangles = tris;
+            mesh.RecalculateNormals();
+            mesh.RecalculateBounds();
+            return mesh;
+        }
+
     }
 }

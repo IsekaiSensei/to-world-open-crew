@@ -48,3 +48,16 @@ Drive follow-up (folder [1wZLgBCGOoOL-r5bW4xJ95fyCS4F50ULT](https://drive.google
 
 `META_REVIEW__044_...platonic_solids_full_set.webp` is a pixel duplicate of REF_11 (not re-added). The Workshop Guide sheet was not in the folder; InfinityBlue is still provisional.
 
+Further plates packed in the shader/camera pass (see HANDOFF.md for Unity vs Godot numbering):
+
+| Ref (Unity) | Subject | Unity use |
+|---|---|---|
+| 27 | Crystal-block world hall (Godot REF_27 / 27b; THE room reference). 27b is a pixel duplicate and was not packed again. | Hall backdrop plate; next step is a walkable shell |
+| 28 | Galaxy-crystal machine cluster (Godot REF_28) | Backdrop plate |
+| 29 | Galactic Ether Relay network (Unity number; **not** Godot REF_29) | Backdrop plate |
+| 30 | Ether 5×5 growth / progression sheet (Unity number; **not** Godot REF_30) | Backdrop plate |
+| 31–33 | Ether galaxy node, mana-flow lattice, Dyson orbital relay | Backdrop plates |
+| 34–35 | GDR-07 wormhole icosahedron and fleet cover (35 has typography — do not copy labels into the scene) | Backdrop plates |
+
+Workshop Guide stand-in (provisional): `characters/GERTECH_WORKSHOP_GUIDE_STANDIN_PROVISIONAL_REFERENCE_11.png` from Drive `GERTECH_REFERENCE_11_GOLD_BLUE_CORE_ASSEMBLY`. InfinityBlue `#52A5FF` and GuideLatticeGold `#BE8258` were sampled from it. It is not the blonde gold-dress turnaround.
+

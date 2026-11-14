@@ -4,9 +4,10 @@ using UnityEngine.Rendering;
 namespace Gertech.Look
 {
     /// <summary>
-    /// Builds URP Lit-compatible materials (falls back to Built-in Standard or Unlit).
-    /// Sets both URP (<c>_BaseColor</c>, <c>_Smoothness</c>, <c>_Surface</c>) and
-    /// Built-in (<c>_Color</c>, <c>_Glossiness</c>) property names.
+    /// Builds look-pass materials from the ported Gertech HLSL shaders
+    /// (GoldChrome, EdgeGlow, CrystalNebula, WormholeTorus). Falls back to
+    /// URP Lit / Built-in Standard / Unlit when a shader is missing.
+    /// Sets both custom and URP/Built-in property names.
     /// </summary>
     public static class GertechMaterialFactory
     {
@@ -15,6 +16,10 @@ namespace Gertech.Look
         public const string UnlitColorName = "Unlit/Color";
         public const string UnlitTextureName = "Unlit/Texture";
         public const string SpritesName = "Sprites/Default";
+        public const string GoldChromeName = "Gertech/GoldChrome";
+        public const string EdgeGlowName = "Gertech/EdgeGlow";
+        public const string CrystalNebulaName = "Gertech/CrystalNebula";
+        public const string WormholeTorusName = "Gertech/WormholeTorus";
 
         public static Shader FindLitShader()
         {
@@ -35,44 +40,59 @@ namespace Gertech.Look
             return FindLitShader();
         }
 
+        public static Shader FindLookShader(string shaderName)
+        {
+            if (!string.IsNullOrEmpty(shaderName))
+            {
+                var shader = Shader.Find(shaderName);
+                if (shader != null) return shader;
+            }
+            return FindLitShader();
+        }
+
+        public static Material LookMaterial(string shaderName, string name)
+        {
+            return new Material(FindLookShader(shaderName)) { name = name };
+        }
+
         public static Material Gold(GertechLookPalette palette = null)
         {
             var gold = palette != null ? palette.Gold : GertechLook.Gold;
-            return Metal(gold, 0.92f, 0.72f, "Gertech Gold");
+            return GoldChrome(gold, 0.2f, 0f, "Gertech Gold", palette);
         }
 
         public static Material GoldJoint(GertechLookPalette palette = null)
         {
             var gold = palette != null ? palette.GoldJoint : GertechLook.GoldJoint;
-            var mat = Metal(gold, 0.88f, 0.65f, "Gertech Gold Joint");
-            ApplyEmission(mat, gold, 1.6f);
-            return mat;
+            return GoldChrome(gold, 0.22f, 0.35f, "Gertech Gold Joint", palette);
         }
 
         public static Material Chrome(GertechLookPalette palette = null)
         {
             var chrome = palette != null ? palette.Chrome : GertechLook.Chrome;
-            return Metal(chrome, 0.98f, 0.85f, "Gertech Chrome");
+            return GoldChrome(chrome, 0.08f, 0f, "Gertech Chrome", palette);
         }
 
         public static Material CyanEdge(GertechLookPalette palette = null)
         {
             var cyan = palette != null ? palette.CyanEmissive : GertechLook.CyanEmissive;
-            var mat = Metal(cyan, 0.35f, 0.7f, "Gertech Cyan Edge");
+            var mat = LookMaterial(EdgeGlowName, "Gertech Cyan Edge");
+            ApplyColor(mat, cyan);
+            mat.SetColor("_Color", cyan);
+            mat.SetFloat("_Energy", 1.6f);
+            mat.SetFloat("_FlowSpeed", 0.5f);
+            mat.SetFloat("_FlowDensity", 3f);
+            mat.SetFloat("_Soft", 1.5f);
+            mat.SetFloat("_Fade", 1f);
             ApplyEmission(mat, cyan, 3.2f);
+            ApplyTransparent(mat);
             return mat;
         }
 
         public static Material CrystalGlass(GertechLookPalette palette = null)
         {
             var cyan = palette != null ? palette.CyanEmissive : GertechLook.CyanEmissive;
-            var tint = GertechLook.WithAlpha(Color.Lerp(Color.white, cyan, 0.28f), 0.18f);
-            var mat = new Material(FindLitShader()) { name = "Gertech Crystal Glass" };
-            ApplyColor(mat, tint);
-            ApplyMetal(mat, 0.08f, 0.95f);
-            ApplyTransparent(mat);
-            ApplyEmission(mat, GertechLook.WithAlpha(cyan, 1f), 0.35f);
-            return mat;
+            return CrystalElement(6, 1f, 0.6f, 0.85f, cyan, "Gertech Crystal Glass", 0f);
         }
 
         public static Material SpaceFill(GertechLookPalette palette = null)
@@ -118,9 +138,7 @@ namespace Gertech.Look
         public static Material GoldGlow(GertechLookPalette palette = null)
         {
             var color = palette != null ? palette.GoldGlow : GertechLook.GoldGlow;
-            var mat = Metal(color, 0.92f, 0.8f, "GERTECH Gold Glow");
-            ApplyEmission(mat, color, 2.2f);
-            return mat;
+            return GoldChrome(color, 0.16f, 0f, "GERTECH Gold Glow", palette);
         }
 
         public static Material CrystalLattice(GertechLookPalette palette = null)
@@ -129,27 +147,79 @@ namespace Gertech.Look
             var teal = palette != null ? palette.Teal : GertechLook.Teal;
             var mix = Color.Lerp(gold, teal, 0.18f);
             mix.a = 0.92f;
-            var mat = Metal(mix, 0.85f, 0.75f, "GERTECH Crystal Lattice");
-            ApplyEmission(mat, palette != null ? palette.CyanEmissive : GertechLook.CyanEmissive, 0.35f);
-            return mat;
+            return GoldChrome(mix, 0.25f, 0.4f, "GERTECH Crystal Lattice", palette);
+        }
+
+        public static Material GuideLattice(GertechLookPalette palette = null)
+        {
+            var gold = palette != null ? palette.GuideLatticeGold : GertechLook.GuideLatticeGold;
+            return GoldChrome(gold, 0.28f, 0.55f, "GERTECH Guide Lattice", palette);
         }
 
         public static Material InfinityAccent(GertechLookPalette palette = null)
         {
             var color = palette != null ? palette.InfinityBlue : GertechLook.InfinityBlue;
-            return EmissiveUnlit(color, 2.4f, "GERTECH Infinity Blue");
+            var mat = LookMaterial(EdgeGlowName, "GERTECH Infinity Blue");
+            ApplyColor(mat, color);
+            mat.SetColor("_Color", color);
+            mat.SetFloat("_Energy", 2.4f);
+            mat.SetFloat("_FlowSpeed", 0.35f);
+            mat.SetFloat("_FlowDensity", 2.5f);
+            mat.SetFloat("_Soft", 1.2f);
+            mat.SetFloat("_Fade", 1f);
+            ApplyEmission(mat, color, 2.4f);
+            ApplyTransparent(mat);
+            return mat;
         }
 
         public static Material NebulaFill(GertechLookPalette palette = null)
         {
             var a = palette != null ? palette.NebulaViolet : GertechLook.NebulaViolet;
-            var b = palette != null ? palette.NebulaMagenta : GertechLook.NebulaMagenta;
-            var mix = Color.Lerp(a, b, 0.45f);
-            mix.a = 0.85f;
-            var mat = new Material(FindLitShader()) { name = "GERTECH Nebula Fill" };
-            ApplyColor(mat, mix);
-            ApplyEmission(mat, mix, 1.4f);
+            var edge = palette != null ? palette.CyanEmissive : GertechLook.CyanEmissive;
+            return CrystalElement(0, 1f, 1f, 0.85f, edge, "GERTECH Nebula Fill", 0f);
+        }
+
+        public static Material WormholeTorus(GertechLookPalette palette = null)
+        {
+            var mat = LookMaterial(WormholeTorusName, "Gertech Wormhole Torus");
+            mat.SetFloat("_Speed", 0.35f);
+            mat.SetFloat("_Energy", 1.25f);
+            mat.SetFloat("_DistortStrength", 0.06f);
             ApplyTransparent(mat);
+            return mat;
+        }
+
+        public static Material CrystalElement(int element, float radius, float density, float alphaBase, Color edgeColor, string name, float helixChannel = 0f)
+        {
+            var mat = LookMaterial(CrystalNebulaName, name);
+            mat.SetInt("_Element", element);
+            mat.SetFloat("_Element", element);
+            mat.SetFloat("_Radius", radius);
+            mat.SetFloat("_Density", density);
+            mat.SetFloat("_HelixChannel", helixChannel);
+            mat.SetFloat("_AlphaBase", alphaBase);
+            mat.SetColor("_EdgeColor", edgeColor);
+            mat.SetFloat("_EdgeGlow", 0.9f);
+            mat.SetFloat("_Energy", 1f);
+            ApplyColor(mat, GertechLook.WithAlpha(edgeColor, alphaBase));
+            ApplyTransparent(mat);
+            return mat;
+        }
+
+        public static Material GoldChrome(Color baseColor, float roughness, float engrave, string name, GertechLookPalette palette = null)
+        {
+            var rim = palette != null ? palette.CyanEmissive : GertechLook.CyanEmissive;
+            var mat = LookMaterial(GoldChromeName, name);
+            ApplyColor(mat, baseColor);
+            mat.SetColor("_BaseColor", baseColor);
+            mat.SetFloat("_Roughness", roughness);
+            mat.SetColor("_RimColor", rim);
+            mat.SetFloat("_RimStrength", 0.7f);
+            mat.SetFloat("_RimPower", 3f);
+            mat.SetFloat("_EnvStrength", 0.85f);
+            mat.SetFloat("_Engrave", engrave);
+            ApplyMetal(mat, 1f, 1f - roughness);
+            ApplyEmission(mat, baseColor, 0.5f);
             return mat;
         }
 
