@@ -5,6 +5,7 @@ using Gertech.Core;
 using Gertech.Inventory;
 using Gertech.Stations;
 using Gertech.Tetraforge;
+using Gertech.Look;
 using UnityEngine;
 
 namespace Gertech.CompileCheck
@@ -97,6 +98,51 @@ namespace Gertech.CompileCheck
                 Fail(ref failures, "visor capacity");
 
             if (!hub.SaveInventory()) Fail(ref failures, "hub save");
+
+            var gold = GertechLook.Hex(GertechLook.GoldHex);
+            if (Math.Abs(gold.r - 0xBF / 255f) > 0.01f) Fail(ref failures, "gold hex");
+            var palette = ScriptableObject.CreateInstance<GertechLookPalette>();
+            palette.ResetToSampledDefaults();
+            var goldMat = GertechMaterialFactory.Gold(palette);
+            if (goldMat == null) Fail(ref failures, "gold material");
+            var glass = GertechMaterialFactory.CrystalGlass(palette);
+            if (glass == null) Fail(ref failures, "crystal glass");
+            var torus = GertechProcMesh.Torus(1f, 0.2f, 8, 12);
+            if (torus == null || torus.vertices == null || torus.vertices.Length == 0)
+                Fail(ref failures, "torus mesh");
+            var helixMesh = GertechProcMesh.TubeHelix(0.4f, 1.5f, 0.03f, 3, 24, 5, 0f);
+            if (helixMesh == null || helixMesh.vertices == null || helixMesh.vertices.Length == 0)
+                Fail(ref failures, "helix mesh");
+
+            var visual = DnaWormholeHelixVisual.Attach(portal);
+            if (visual == null) Fail(ref failures, "helix visual attach");
+            visual.Palette = palette;
+            visual.Rebuild();
+
+            var blockGo = new GameObject("CrystalBlockTest");
+            var block = blockGo.AddComponent<CrystalBlockBuilder>();
+            block.Palette = palette;
+            block.Rebuild();
+
+            var triGo = new GameObject("TriangleTest");
+            var tri = triGo.AddComponent<TriangleModuleBuilder>();
+            tri.Palette = palette;
+            tri.Rebuild();
+
+            var flipGo = GameObject.CreatePrimitive(PrimitiveType.Quad);
+            var flip = flipGo.AddComponent<GertechFlipbook>();
+            flip.Configure(new Texture2D(64, 64), GertechFlipbook.RefSheetColumns, GertechFlipbook.RefSheetRows, 8f);
+            flip.ShowFrame(7);
+            if (flip.FrameCount != 30) Fail(ref failures, "flipbook 30 frames");
+
+            var cam = new GameObject("Cam").AddComponent<Camera>();
+            GertechBackdrop.ApplyCameraSpaceBackground(cam, palette);
+            if (cam.backgroundColor.r != 0f) Fail(ref failures, "space black camera");
+
+            var rowGo = new GameObject("ElementalRow");
+            var row = rowGo.AddComponent<ElementalCrystalRow>();
+            row.Rebuild();
+
 
             if (failures == 0)
             {

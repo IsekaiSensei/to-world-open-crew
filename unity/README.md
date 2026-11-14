@@ -2,23 +2,33 @@
 
 Parallel Unity (C#) scaffold of Ryan's GERTECH manufacturing universe, built for direct comparison with the Godot Aqua Workshop and the Roblox port.
 
-**Source of truth:** the Godot project at [`../godot/GERTECH_Aqua_Workshop`](../godot/GERTECH_Aqua_Workshop) in this repository (`IsekaiSensei/to-world-open-crew`). Item ids, starter stock, foundry material rules, visor-chip upgrade, and workshop module names are copied from that tree.
+**Source of truth:** the Godot project at [`../godot/GERTECH_Aqua_Workshop`](../godot/GERTECH_Aqua_Workshop) in this repository (`IsekaiSensei/to-world-open-crew`). Item ids, starter stock, foundry material rules, visor-chip upgrade, and workshop module names are copied from that tree. The Unity look pass is **provisional PNG assist**, not canon.
 
-Open this `unity/` folder in **Unity 6.3 LTS** (`6000.3.28f1` is the targeted editor version recorded in `ProjectSettings/ProjectVersion.txt`). Unity Editor / Hub are not assumed to be installed in every environment, and this tree does not include a signed-in license.
+Open this `unity/` folder (or `/workspace/gertech-unity` on the shared box) in **Unity 6.3 LTS** (`6000.3.28f1` is the targeted editor version recorded in `ProjectSettings/ProjectVersion.txt`). Unity Editor / Hub are not assumed to be installed in every environment, and this tree does not include a signed-in license.
 
 ## How to open and build the hub scene
 
 1. Install Unity Hub and Unity 6.3 LTS (6000.3.28f1 or another 6000.3 LTS patch).
-2. In Hub, **Open** → choose this `unity/` folder (the directory that contains `Assets/`, `Packages/`, and `ProjectSettings/`).
+2. In Hub, **Open** → choose this project folder (the directory that contains `Assets/`, `Packages/`, and `ProjectSettings/`).
 3. Wait for first-time import. Unity will generate `.meta` files, a solution, and fill in missing Project Settings.
 4. From the menu: **GERTECH → Build Workshop Hub Scene**. This creates:
    - `Assets/Data/Items/*.asset` — `ItemDefinition` ScriptableObjects
    - `Assets/Data/Stations/*.asset` — `StationDefinition` ScriptableObjects
    - `Assets/Data/Recipes/*.asset` — TETRAFORGE `CraftingRecipe` assets
-   - `Assets/Scenes/WorkshopHub.unity` — hub with `WorkshopHub`, stations, and the DNA wormhole helix portal
+   - `Assets/Data/GertechLookPalette.asset` — sampled gold / chrome / cyan / teal / space-black palette
+   - `Assets/Art/Materials/` — URP Lit-compatible gold, chrome, cyan-edge, crystal-glass materials
+   - `Assets/Scenes/WorkshopHub.unity` — hub with stations, the DNA wormhole helix portal and visual, crystal block, triangle module, flipbooks, and reference plates
 5. Open `Assets/Scenes/WorkshopHub.unity` if it is not already active, and press Play.
 
-The Editor script lives at `Assets/Editor/EditorBootstrap.cs`. You can also create definitions by hand from the **GERTECH** Create Asset menus.
+The Editor scripts live at `Assets/Editor/EditorBootstrap.cs` and `Assets/Editor/GertechLookBootstrap.cs`. Materials target **URP Lit** property names (`_BaseColor`, `_Metallic`, `_Smoothness`, `_EmissionColor`, `_Surface`) and also set Built-in Standard names so the project can open before a URP package is added. A URP Lit shader is not pinned in `Packages/manifest.json`; install Universal RP in the Editor if you want the Lit path.
+
+## Look pass (provisional)
+
+Reference PNGs are under `Assets/Art/Refs/` (see `Assets/Art/Refs/ORIGINALS.md` and `LOOK_MAP.md`). Originals are at `/workspace/gertech_shared_refs/visual_2026-11-14/`. Copies in the project are downscaled (max 512 px, 256-color PNG) for git; originals remain at full resolution.
+
+Shared look: black space with star dust, polished gold and chrome, glowing cyan edges, gold Platonic frames, a DNA wormhole helix as a **torus of distortion with a helix inside**, fractal gold/silver/teal clusters, Voronoi lattices, and golden-spiral polyhedra chains. The PNGs are used directly as backdrop plates, floor decals, UI-style flipbook screens, and inner nebula textures.
+
+Palette hex (sampled from the refs): space black `#000000`, space navy `#0C192A` (REF_14), gold `#BF8F43` (REF_05), gold joint `#EF9E29` (REF_10), chrome `#BDC0BC` (REF_03), cyan emissive `#35CAD8` (REF_09), teal `#3A8D9F`.
 
 ## Layout
 
@@ -31,7 +41,11 @@ Assets/Scripts/Stations/      Gertech.Stations IStation, StationBase, StationDef
 Assets/Scripts/Inventory/     Gertech.Inventory ItemDefinition, Inventory, InventoryPersistence
 Assets/Scripts/Tetraforge/    Gertech.Tetraforge CraftingRecipe, TetraForgeStation,
                                                TetrisForgeFoundry (Godot foundry mapping stub)
-Assets/Editor/                Scene / data bootstrap (Unity Editor only)
+Assets/Scripts/Look/          Gertech.Look     Palette, material factory, sky/backdrop plates,
+                                               DNA wormhole helix visual, crystal block,
+                                               triangle module, flipbook, elemental row
+Assets/Art/Refs/              Downscaled GERTECH_REF_01..14 plus crops
+Assets/Editor/                Scene / data / look bootstrap (Unity Editor only)
 Assets/Data/                  ScriptableObject output (after bootstrap)
 Packages/manifest.json        Built-in modules only
 ProjectSettings/              Editor version (ProjectVersion.txt)
@@ -50,7 +64,7 @@ The loft stock exchange recipe from Godot (4 `packed_block` + 1 `forged_blank` �
 
 ## Portal naming
 
-Item transfer in and out of the workshop goes through `DnaWormholeHelixPortal`. That name refers to the DNA wormhole helix / Godot **05 / GALACTIC ETHER RELAY** ("DOUBLE HELIX OPENS THE POCKET DIMENSION"). Do not use other informal nicknames for this aperture in code or docs.
+Item transfer in and out of the workshop goes through `DnaWormholeHelixPortal`. The matching visual is `DnaWormholeHelixVisual` (distortion torus + inner double helix). Those names refer to the DNA wormhole helix / Godot **05 / GALACTIC ETHER RELAY** ("DOUBLE HELIX OPENS THE POCKET DIMENSION"). Do not use other informal nicknames for this aperture in code or docs.
 
 ## Godot / Roblox (what this mirrors)
 
@@ -66,9 +80,10 @@ See `COMPARISON.md` for the Unity vs Godot vs Roblox metrics template (values le
 
 ## Compile check (no Unity Editor)
 
-A .NET SDK can compile the runtime scripts against `tools/compile-check` UnityEngine stubs. That does **not** compile Editor scripts, does **not** import assets, and does **not** prove the project opens in Unity. From this `unity/` folder:
+A .NET SDK can compile the runtime scripts against `tools/compile-check` UnityEngine stubs. That does **not** compile Editor scripts, does **not** import assets, and does **not** prove the project opens in Unity or that URP Lit materials render as intended. From this project folder:
 
 ```bash
+export PATH="$HOME/.dotnet:$PATH"
 dotnet build tools/compile-check/GertechCompileCheck.csproj
 dotnet run --project tools/compile-check/GertechCompileCheck.csproj
 ```

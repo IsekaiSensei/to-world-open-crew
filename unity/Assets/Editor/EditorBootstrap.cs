@@ -40,7 +40,7 @@ namespace Gertech.EditorTools
             camGo.transform.rotation = Quaternion.Euler(20f, 0f, 0f);
             var camera = camGo.GetComponent<Camera>();
             camera.clearFlags = CameraClearFlags.SolidColor;
-            camera.backgroundColor = new Color(0.03f, 0.05f, 0.09f);
+            camera.backgroundColor = Gertech.Look.GertechLook.SpaceBlack;
 
             var lightGo = new GameObject("Directional Light", typeof(Light));
             var light = lightGo.GetComponent<Light>();
@@ -80,6 +80,8 @@ namespace Gertech.EditorTools
             });
 
             PlaceStation<TetrisForgeFoundry>(hubGo.transform, "TetrisForgeFoundry", new Vector3(4f, 0f, 4f), defs["tetris_forge_foundry"]);
+
+            GertechLookBootstrap.ApplyLook(hubGo.transform, camera, floor, portal);
 
             hub.DiscoverStations();
             EditorSceneManager.SaveScene(scene, ScenePath);
