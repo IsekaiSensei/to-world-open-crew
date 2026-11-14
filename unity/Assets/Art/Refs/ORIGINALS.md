@@ -62,3 +62,15 @@ Full-resolution copies: `/workspace/gertech_shared_refs/visual_2026-11-14_batch2
 
 These are stored in `packed_512px_pngs.json` (do not push raw PNGs through the text file API). Restore with `python3 tools/decode-art-refs.py`.
 
+Drive follow-up plates (originals in `/workspace/gertech_shared_refs/visual_2026-11-14_batch2/`, sourced from Drive folder `1wZLgBCGOoOL-r5bW4xJ95fyCS4F50ULT`):
+
+| File | Original px | Original bytes | Committed px |
+|---|---|---|---|
+| batch2/GERTECH_REF_20_voronoi_gold_silver_cyan_blackhole.png | 784x1168 | 479,193 | 344x512 |
+| batch2/GERTECH_REF_21_fractal_recursive_hex_voronoi.png | 784x1168 | 764,684 | 344x512 |
+| batch2/GERTECH_REF_22_kepler_sphere_packing_spiral.png | 784x1168 | 289,117 | 344x512 |
+| batch2/GERTECH_REF_23_star_tetrahedron_crystal_sphere.png | 784x1168 | 381,032 | 344x512 |
+| batch2/GERTECH_REF_24_gold_chrome_hypercube_frame.png | 784x1168 | 196,422 | 344x512 |
+| batch2/GERTECH_REF_25_wordless_modular_build_sheet.png | 2000x2000 | 497,906 | 512x512 |
+| batch2/GERTECH_REF_26_assembled_modular_cluster.png | 1000x1000 | 142,799 | 512x512 |
+

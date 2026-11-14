@@ -34,3 +34,17 @@ Originals: `/workspace/gertech_shared_refs/visual_2026-11-14_batch2/` (see that 
 
 **Workshop Guide** (Ryan, 2026-11-14): the gold-dress character turnaround is the **player's guide**, not just a costume ref. Name her only **Workshop Guide** (no invented name). The sheet itself was not in the 8 delivered files; when it arrives, put it in `Assets/Art/Refs/characters/` as the visual target. Unity stand-in: `Gertech.Core.Guide.GuideCharacter` (gold / crystal-lattice capsule, blue infinity accent) with `GuideDialogue` onboarding that can follow or wait near the player and point to the Forge, TETRAFORGE, and the DNA wormhole helix portal.
 
+Drive follow-up (folder [1wZLgBCGOoOL-r5bW4xJ95fyCS4F50ULT](https://drive.google.com/drive/folders/1wZLgBCGOoOL-r5bW4xJ95fyCS4F50ULT)): no files in that library were dated 2026-11-14, so the rest of the morning chat drop (including the Workshop Guide turnaround) was not there. These GERTECH-titled plates already in the folder (2026-10-31 / 2026-11-02) are new versus batch 1 and 2:
+
+| Ref | Subject | Unity use |
+|---|---|---|
+| 20 | Gold / silver Voronoi lattice, cyan edges, black core | Backdrop / look plate |
+| 21 | Fractal recursive gold hex / Voronoi spiral | Backdrop / look plate |
+| 22 | Kepler sphere-packing golden spiral into a cyan vortex | Backdrop / look plate |
+| 23 | Gold star-tetrahedron / platonic frames in a crystal sphere, cyan vortex | Backdrop plate (also informs helix / platonic-frame look) |
+| 24 | Gold / chrome hypercube frame | Backdrop / look plate |
+| 25 | Wordless low-poly modular cube build sheet | Backdrop plate; earlier modular-block language |
+| 26 | Assembled low-poly modular cube cluster | Backdrop plate |
+
+`META_REVIEW__044_...platonic_solids_full_set.webp` is a pixel duplicate of REF_11 (not re-added). The Workshop Guide sheet was not in the folder; InfinityBlue is still provisional.
+

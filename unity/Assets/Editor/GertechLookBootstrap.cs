@@ -162,6 +162,21 @@ namespace Gertech.EditorTools
             PlacePlate(lookRoot.transform, "Plate_REF18_StarshipSheet", ref18, new Vector3(0f, 4.8f, -14f), new Vector3(0f, 0f, 0f), new Vector2(5.4f, 4.0f));
             PlacePlate(lookRoot.transform, "Plate_REF19_CrystalCar", ref19, new Vector3(14f, 4.0f, 8f), new Vector3(0f, -150f, 0f), new Vector2(5.0f, 2.8f));
 
+            var ref20 = LoadTex(ArtRefs + "/batch2/GERTECH_REF_20_voronoi_gold_silver_cyan_blackhole.png");
+            var ref21 = LoadTex(ArtRefs + "/batch2/GERTECH_REF_21_fractal_recursive_hex_voronoi.png");
+            var ref22 = LoadTex(ArtRefs + "/batch2/GERTECH_REF_22_kepler_sphere_packing_spiral.png");
+            var ref23 = LoadTex(ArtRefs + "/batch2/GERTECH_REF_23_star_tetrahedron_crystal_sphere.png");
+            var ref24 = LoadTex(ArtRefs + "/batch2/GERTECH_REF_24_gold_chrome_hypercube_frame.png");
+            var ref25 = LoadTex(ArtRefs + "/batch2/GERTECH_REF_25_wordless_modular_build_sheet.png");
+            var ref26 = LoadTex(ArtRefs + "/batch2/GERTECH_REF_26_assembled_modular_cluster.png");
+            PlacePlate(lookRoot.transform, "Plate_REF20_VoronoiBlackhole", ref20, new Vector3(-18f, 6f, -6f), new Vector3(0f, 55f, 0f), new Vector2(3.8f, 5.6f));
+            PlacePlate(lookRoot.transform, "Plate_REF21_RecursiveHex", ref21, new Vector3(18f, 6f, -6f), new Vector3(0f, -55f, 0f), new Vector2(3.8f, 5.6f));
+            PlacePlate(lookRoot.transform, "Plate_REF22_KeplerSpiral", ref22, new Vector3(-18f, 6f, 8f), new Vector3(0f, 100f, 0f), new Vector2(3.8f, 5.6f));
+            PlacePlate(lookRoot.transform, "Plate_REF23_StarTetrahedron", ref23, new Vector3(18f, 6f, 8f), new Vector3(0f, -100f, 0f), new Vector2(3.8f, 5.6f));
+            PlacePlate(lookRoot.transform, "Plate_REF24_Hypercube", ref24, new Vector3(0f, 8.5f, -12f), new Vector3(0f, 0f, 0f), new Vector2(3.2f, 4.8f));
+            PlacePlate(lookRoot.transform, "Plate_REF25_WordlessModular", ref25, new Vector3(-4f, 4.6f, -14f), new Vector3(0f, 10f, 0f), new Vector2(3.6f, 3.6f));
+            PlacePlate(lookRoot.transform, "Plate_REF26_AssembledCluster", ref26, new Vector3(4f, 4.6f, -14f), new Vector3(0f, -10f, 0f), new Vector2(3.2f, 3.2f));
+
             var assemblyNebula = nebula != null ? nebula : ref14;
             CrystalBlockGrid.Build(lookRoot.transform, "Assembly_CarHullSection",
                 ModularAssemblyPresets.CarHullSection(), new Vector3(-9.5f, 0.1f, -5.5f), palette, assemblyNebula, 0.4f, false);

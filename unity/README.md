@@ -46,7 +46,7 @@ Assets/Scripts/Look/          Gertech.Look     Palette, material factory, sky/ba
                                                DNA wormhole helix visual, crystal block,
                                                triangle module, flipbook, elemental row,
                                                crystal-block grid / vehicle / starship hull
-Assets/Art/Refs/              Downscaled GERTECH_REF_01..19, batch2/, characters/, crops
+Assets/Art/Refs/              Downscaled GERTECH_REF_01..26 (batch2/ holds 15–26 as packed JSON), characters/, crops
 Assets/Editor/                Scene / data / look bootstrap (Unity Editor only)
 Assets/Data/                  ScriptableObject output (after bootstrap)
 Packages/manifest.json        Built-in modules only
