@@ -24,7 +24,7 @@ The Editor scripts live at `Assets/Editor/EditorBootstrap.cs` and `Assets/Editor
 
 ## Look pass (provisional)
 
-Reference PNGs are under `Assets/Art/Refs/` (see `Assets/Art/Refs/ORIGINALS.md` and `LOOK_MAP.md`). Originals are at `/workspace/gertech_shared_refs/visual_2026-11-14/`. Copies in the project are downscaled (max 512 px, 256-color PNG) for git; originals remain at full resolution.
+Reference PNGs are under `Assets/Art/Refs/` (see `Assets/Art/Refs/ORIGINALS.md` and `LOOK_MAP.md`). Originals are at `/workspace/gertech_shared_refs/visual_2026-11-14/`. Copies in the local project are downscaled (max 512 px, 256-color PNG). The `.png` blobs on GitHub were transcoded by the text file API and are not valid PNGs — restore them after a clone with `python3 tools/decode-art-refs.py` (see `Assets/Art/Refs/ORIGINALS.md` and `packed_512px_pngs.json`). Originals remain at full resolution on the shared box.
 
 Shared look: black space with star dust, polished gold and chrome, glowing cyan edges, gold Platonic frames, a DNA wormhole helix as a **torus of distortion with a helix inside**, fractal gold/silver/teal clusters, Voronoi lattices, and golden-spiral polyhedra chains. The PNGs are used directly as backdrop plates, floor decals, UI-style flipbook screens, and inner nebula textures.
 

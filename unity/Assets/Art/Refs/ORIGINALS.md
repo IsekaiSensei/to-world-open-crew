@@ -33,4 +33,17 @@ Crops (from the originals, then downscaled):
 - `crops/nebula_from_ref14.png` (512x486) — interior nebula of the REF_14 triangle, used inside the crystal block and triangle module
 - `crops/modular_block_hero_from_ref10.png` (512x412) — featured cube from the REF_10 model sheet, used as a decal/plate
 
+
+## GitHub copies
+
+The `.png` files in this folder on GitHub are **not valid PNGs**. They were published through a text-only file API that UTF-8-transcoded the bytes (file sizes on GitHub are ~1.5× the real PNGs). Do not use those blobs as textures.
+
+Valid 512 px copies are stored as ASCII in `packed_512px_pngs.json`. After a clone, restore them with:
+
+```bash
+python3 tools/decode-art-refs.py
+```
+
+That overwrites the transcoded `.png` paths with the correct bytes (the working tree will show those files as modified until the transcoded blobs are removed from git). On this shared box, `/workspace/gertech-unity/Assets/Art/Refs/` already has valid 512 px files, and the originals remain at the path above.
+
 REF_12 and REF_13 are **6×5 sprite sheets** (30 frames). On the originals each cell is exactly 229×229 px. `GertechFlipbook` uses 6 columns × 5 rows with a small UV inset to hide the gold gutters.
