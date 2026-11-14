@@ -47,3 +47,18 @@ python3 tools/decode-art-refs.py
 That overwrites the transcoded `.png` paths with the correct bytes (the working tree will show those files as modified until the transcoded blobs are removed from git). On this shared box, `/workspace/gertech-unity/Assets/Art/Refs/` already has valid 512 px files, and the originals remain at the path above.
 
 REF_12 and REF_13 are **6×5 sprite sheets** (30 frames). On the originals each cell is exactly 229×229 px. `GertechFlipbook` uses 6 columns × 5 rows with a small UV inset to hide the gold gutters.
+
+## Batch 2
+
+Full-resolution copies: `/workspace/gertech_shared_refs/visual_2026-11-14_batch2/` (`INDEX.md` lists what arrived). Unity 512 px palette-reduced unique plates:
+
+| File | Original px | Original bytes | Committed px |
+|---|---|---|---|
+| batch2/GERTECH_REF_15_hex_honeycomb_cyan_spiral.png | 784x1168 | 536,122 | 344x512 |
+| batch2/GERTECH_REF_16_gold_silver_ornate_hex_spiral.png | 784x1168 | 473,882 | 344x512 |
+| batch2/GERTECH_REF_17_gold_sphere_chain_spiral.png | 784x1168 | 303,360 | 344x512 |
+| batch2/GERTECH_REF_18_starship_hull_sheet.png | 1448x1086 | 3,794,010 | 512x384 |
+| batch2/GERTECH_REF_19_crystal_block_car_gertech_building.png | 1672x941 | 3,279,599 | 512x288 |
+
+These are stored in `packed_512px_pngs.json` (do not push raw PNGs through the text file API). Restore with `python3 tools/decode-art-refs.py`.
+

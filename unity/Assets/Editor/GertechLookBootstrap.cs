@@ -1,4 +1,5 @@
 using Gertech.Core;
+using Gertech.Core.Guide;
 using Gertech.Look;
 using UnityEditor;
 using UnityEngine;
@@ -21,6 +22,8 @@ namespace Gertech.EditorTools
             EnsureFolder("Assets", "Art");
             EnsureFolder("Assets/Art", "Refs");
             EnsureFolder("Assets/Art/Refs", "crops");
+            EnsureFolder("Assets/Art/Refs", "batch2");
+            EnsureFolder("Assets/Art/Refs", "characters");
             EnsureFolder("Assets/Art", "Materials");
             EnsureFolder("Assets", "Data");
 
@@ -148,6 +151,35 @@ namespace Gertech.EditorTools
             CreateFlipbook(lookRoot.transform, "Flipbook_REF13_HelixPlatonic", ref13,
                 new Vector3(6.5f, 2.4f, -2.5f), new Vector3(0f, -25f, 0f), new Vector2(3.2f, 2.7f));
 
+            var ref15 = LoadTex(ArtRefs + "/batch2/GERTECH_REF_15_hex_honeycomb_cyan_spiral.png");
+            var ref16 = LoadTex(ArtRefs + "/batch2/GERTECH_REF_16_gold_silver_ornate_hex_spiral.png");
+            var ref17 = LoadTex(ArtRefs + "/batch2/GERTECH_REF_17_gold_sphere_chain_spiral.png");
+            var ref18 = LoadTex(ArtRefs + "/batch2/GERTECH_REF_18_starship_hull_sheet.png");
+            var ref19 = LoadTex(ArtRefs + "/batch2/GERTECH_REF_19_crystal_block_car_gertech_building.png");
+            PlacePlate(lookRoot.transform, "Plate_REF15_HexHoneycomb", ref15, new Vector3(-18f, 6f, 2f), new Vector3(0f, 80f, 0f), new Vector2(4f, 6f));
+            PlacePlate(lookRoot.transform, "Plate_REF16_OrnateHex", ref16, new Vector3(18f, 6f, 2f), new Vector3(0f, -80f, 0f), new Vector2(4f, 6f));
+            PlacePlate(lookRoot.transform, "Plate_REF17_SphereChain", ref17, new Vector3(-14f, 7.5f, -8f), new Vector3(0f, 40f, 0f), new Vector2(4f, 6f));
+            PlacePlate(lookRoot.transform, "Plate_REF18_StarshipSheet", ref18, new Vector3(0f, 4.8f, -14f), new Vector3(0f, 0f, 0f), new Vector2(5.4f, 4.0f));
+            PlacePlate(lookRoot.transform, "Plate_REF19_CrystalCar", ref19, new Vector3(14f, 4.0f, 8f), new Vector3(0f, -150f, 0f), new Vector2(5.0f, 2.8f));
+
+            var assemblyNebula = nebula != null ? nebula : ref14;
+            CrystalBlockGrid.Build(lookRoot.transform, "Assembly_CarHullSection",
+                ModularAssemblyPresets.CarHullSection(), new Vector3(-9.5f, 0.1f, -5.5f), palette, assemblyNebula, 0.4f, false);
+            CrystalBlockGrid.Build(lookRoot.transform, "Assembly_HumanoidTorso",
+                ModularAssemblyPresets.HumanoidTorso(), new Vector3(-6.5f, 0.1f, -5.5f), palette, assemblyNebula, 0.35f, true);
+            CrystalBlockGrid.Build(lookRoot.transform, "Assembly_MachineCluster",
+                ModularAssemblyPresets.MachineCluster(), new Vector3(6.5f, 0.1f, -5.5f), palette, assemblyNebula, 0.35f, false);
+            var ship = StarshipHull.Build(lookRoot.transform, new Vector3(9.5f, 0.2f, -8.5f), palette, assemblyNebula);
+            var vehicle = CrystalBlockVehicle.Build(lookRoot.transform, new Vector3(-11f, 0.2f, 0f), palette, assemblyNebula);
+
+            var playerAnchor = new GameObject("PlayerAnchor");
+            playerAnchor.transform.SetParent(lookRoot.transform, false);
+            playerAnchor.transform.localPosition = new Vector3(0f, 0f, -1.5f);
+            Transform forgeTf = hub != null ? FindChild(hub, "Forge") : null;
+            Transform tetraTf = hub != null ? FindChild(hub, "TetraForge") : null;
+            var guide = GuideCharacter.Build(lookRoot.transform, new Vector3(1.6f, 0f, 0.4f), palette, null, playerAnchor.transform);
+            guide.PlayHint(0, forgeTf, tetraTf, portal != null ? portal.transform : null);
+
             // Tint station primitives that already exist under the hub.
             if (hub != null)
             {
@@ -161,6 +193,10 @@ namespace Gertech.EditorTools
                     if (r.GetComponentInParent<TriangleModuleBuilder>() != null) continue;
                     if (r.GetComponentInParent<ElementalCrystalRow>() != null) continue;
                     if (r.GetComponentInParent<DnaWormholeHelixVisual>() != null) continue;
+                    if (r.GetComponentInParent<CrystalBlockGrid>() != null) continue;
+                    if (r.GetComponentInParent<CrystalBlockVehicle>() != null) continue;
+                    if (r.GetComponentInParent<StarshipHull>() != null) continue;
+                    if (r.GetComponentInParent<GuideCharacter>() != null) continue;
                     if (r.gameObject.name.StartsWith("Plate_") || r.gameObject.name.StartsWith("Sky_") || r.gameObject.name.StartsWith("Flipbook_"))
                         continue;
                     // Alternate gold / chrome on workshop station blocks.
@@ -228,6 +264,18 @@ namespace Gertech.EditorTools
         static Texture2D LoadTex(string path)
         {
             return AssetDatabase.LoadAssetAtPath<Texture2D>(path);
+        }
+
+        static Transform FindChild(Transform root, string childName)
+        {
+            if (root == null) return null;
+            if (root.name == childName) return root;
+            for (int i = 0; i < root.childCount; i++)
+            {
+                var found = FindChild(root.GetChild(i), childName);
+                if (found != null) return found;
+            }
+            return null;
         }
 
         static void EnsureFolder(string parent, string name)

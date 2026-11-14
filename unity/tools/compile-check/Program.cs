@@ -6,6 +6,7 @@ using Gertech.Inventory;
 using Gertech.Stations;
 using Gertech.Tetraforge;
 using Gertech.Look;
+using Gertech.Core.Guide;
 using UnityEngine;
 
 namespace Gertech.CompileCheck
@@ -143,6 +144,60 @@ namespace Gertech.CompileCheck
             var row = rowGo.AddComponent<ElementalCrystalRow>();
             row.Rebuild();
 
+            if (Math.Abs(GertechLook.Hex(GertechLook.NebulaVioletHex).r - 0x70 / 255f) > 0.01f)
+                Fail(ref failures, "nebula violet hex");
+            if (Math.Abs(GertechLook.Hex(GertechLook.GoldGlowHex).r - 0xDC / 255f) > 0.01f)
+                Fail(ref failures, "gold glow hex");
+
+            var carVoxels = ModularAssemblyPresets.CarHullSection();
+            var torsoVoxels = ModularAssemblyPresets.HumanoidTorso();
+            var clusterVoxels = ModularAssemblyPresets.MachineCluster();
+            var shipVoxels = ModularAssemblyPresets.StarshipHullSection();
+            if (carVoxels.Length < 8) Fail(ref failures, "car hull voxels");
+            if (torsoVoxels.Length < 8) Fail(ref failures, "torso voxels");
+            if (clusterVoxels.Length < 8) Fail(ref failures, "machine cluster voxels");
+            if (shipVoxels.Length < 16) Fail(ref failures, "starship voxels");
+
+            var gridGo = new GameObject("GridTest");
+            var grid = gridGo.AddComponent<CrystalBlockGrid>();
+            grid.Palette = palette;
+            grid.SetVoxels(carVoxels);
+            grid.Rebuild();
+            if (grid.VoxelCount != carVoxels.Length) Fail(ref failures, "grid voxel count");
+            grid.ApplyGrowth(0.2f);
+            grid.ApplyGrowth(0.5f);
+            grid.ApplyGrowth(1f);
+            var growth = gridGo.AddComponent<CrystalBlockGrowth>();
+            growth.Grid = grid;
+            growth.Play();
+            growth.StopAt(1f);
+
+            var vehicle = CrystalBlockVehicle.Build(null, Vector3.zero, palette, null);
+            if (vehicle == null || vehicle.Body == null) Fail(ref failures, "vehicle rigidbody");
+            if (vehicle.Wheels == null || vehicle.Wheels.Length != 4) Fail(ref failures, "vehicle wheels");
+            vehicle.SetDrive(10f, 8f);
+
+            var ship = StarshipHull.Build(null, Vector3.zero, palette, null);
+            if (ship == null || ship.DockingPort == null) Fail(ref failures, "starship docking port");
+            var dockProbe = new GameObject("DockProbe");
+            if (!ship.DockingPort.TryDock(dockProbe.transform)) Fail(ref failures, "dock");
+            if (!ship.DockingPort.Occupied) Fail(ref failures, "dock occupied");
+            ship.DockingPort.Undock();
+            if (ship.DockingPort.Occupied) Fail(ref failures, "undock");
+
+            var player = new GameObject("PlayerAnchor");
+            player.transform.position = new Vector3(2f, 0f, 0f);
+            var dialogue = GuideDialogue.CreateDefaultOnboarding();
+            if (dialogue.Hints == null || dialogue.Hints.Length < 4) Fail(ref failures, "guide dialogue hints");
+            if (dialogue.SpeakerName != GuideCharacter.DisplayName) Fail(ref failures, "guide speaker name");
+            var guide = GuideCharacter.Build(null, Vector3.zero, palette, dialogue, player.transform);
+            if (guide.Label != "Workshop Guide") Fail(ref failures, "guide label");
+            if (!guide.PlayHint(0, forge.transform, tetra.transform, portal.transform))
+                Fail(ref failures, "guide welcome hint");
+            if (!guide.TryPointToId("forge", forge.transform, tetra.transform, portal.transform))
+                Fail(ref failures, "guide point forge");
+            guide.Follow(player.transform);
+            guide.WaitNear(player.transform);
 
             if (failures == 0)
             {

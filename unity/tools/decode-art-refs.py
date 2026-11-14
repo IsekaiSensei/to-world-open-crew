@@ -8,7 +8,8 @@ correct bytes over those paths (or creates them). After a clone:
     python3 tools/decode-art-refs.py
 
 Original full-resolution plates stay on the shared box at
-/workspace/gertech_shared_refs/visual_2026-11-14/
+/workspace/gertech_shared_refs/visual_2026-11-14/ and
+/workspace/gertech_shared_refs/visual_2026-11-14_batch2/
 """
 from __future__ import annotations
 

@@ -115,6 +115,44 @@ namespace Gertech.Look
             return mat;
         }
 
+        public static Material GoldGlow(GertechLookPalette palette = null)
+        {
+            var color = palette != null ? palette.GoldGlow : GertechLook.GoldGlow;
+            var mat = Metal(color, 0.92f, 0.8f, "GERTECH Gold Glow");
+            ApplyEmission(mat, color, 2.2f);
+            return mat;
+        }
+
+        public static Material CrystalLattice(GertechLookPalette palette = null)
+        {
+            var gold = palette != null ? palette.Gold : GertechLook.Gold;
+            var teal = palette != null ? palette.Teal : GertechLook.Teal;
+            var mix = Color.Lerp(gold, teal, 0.18f);
+            mix.a = 0.92f;
+            var mat = Metal(mix, 0.85f, 0.75f, "GERTECH Crystal Lattice");
+            ApplyEmission(mat, palette != null ? palette.CyanEmissive : GertechLook.CyanEmissive, 0.35f);
+            return mat;
+        }
+
+        public static Material InfinityAccent(GertechLookPalette palette = null)
+        {
+            var color = palette != null ? palette.InfinityBlue : GertechLook.InfinityBlue;
+            return EmissiveUnlit(color, 2.4f, "GERTECH Infinity Blue");
+        }
+
+        public static Material NebulaFill(GertechLookPalette palette = null)
+        {
+            var a = palette != null ? palette.NebulaViolet : GertechLook.NebulaViolet;
+            var b = palette != null ? palette.NebulaMagenta : GertechLook.NebulaMagenta;
+            var mix = Color.Lerp(a, b, 0.45f);
+            mix.a = 0.85f;
+            var mat = new Material(FindLitShader()) { name = "GERTECH Nebula Fill" };
+            ApplyColor(mat, mix);
+            ApplyEmission(mat, mix, 1.4f);
+            ApplyTransparent(mat);
+            return mat;
+        }
+
         public static void ApplyColor(Material mat, Color color)
         {
             if (mat == null) return;

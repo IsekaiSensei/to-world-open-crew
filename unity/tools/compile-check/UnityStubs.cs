@@ -93,6 +93,25 @@ namespace UnityEngine
             t = Mathf.Clamp(t, 0f, 1f);
             return a + (b - a) * t;
         }
+        public static Vector3 MoveTowards(Vector3 current, Vector3 target, float maxDistanceDelta)
+        {
+            var d = target - current;
+            var dist = d.magnitude;
+            if (dist <= maxDistanceDelta || dist < 0.00001f) return target;
+            return current + d / dist * maxDistanceDelta;
+        }
+    }
+
+    public struct Vector3Int : IEquatable<Vector3Int>
+    {
+        public int x, y, z;
+        public Vector3Int(int x, int y, int z) { this.x = x; this.y = y; this.z = z; }
+        public static Vector3Int zero { get { return new Vector3Int(0, 0, 0); } }
+        public bool Equals(Vector3Int other) { return x == other.x && y == other.y && z == other.z; }
+        public override bool Equals(object obj) { return obj is Vector3Int && Equals((Vector3Int)obj); }
+        public override int GetHashCode() { return (x * 73856093) ^ (y * 19349663) ^ (z * 83492791); }
+        public static bool operator ==(Vector3Int a, Vector3Int b) { return a.Equals(b); }
+        public static bool operator !=(Vector3Int a, Vector3Int b) { return !a.Equals(b); }
     }
 
     public struct Quaternion
@@ -183,6 +202,11 @@ namespace UnityEngine
         }
 
         public void Rotate(Vector3 axis, float angle, Space relativeTo = Space.Self) { }
+        public void LookAt(Vector3 worldPosition) { rotation = Quaternion.LookRotation(worldPosition - position); }
+        public void LookAt(Transform target)
+        {
+            if (target != null) LookAt(target.position);
+        }
 
         public Transform GetChild(int index)
         {
@@ -449,6 +473,24 @@ namespace UnityEngine
         public AddComponentMenuAttribute(string menuName, int order) { }
     }
 
+    public class Rigidbody : Component
+    {
+        public float mass { get; set; } = 1f;
+        public bool isKinematic { get; set; }
+        public Vector3 velocity { get; set; }
+        public Vector3 angularVelocity { get; set; }
+        public bool useGravity { get; set; } = true;
+    }
+
+    public class WheelCollider : Component
+    {
+        public float radius { get; set; } = 0.3f;
+        public float suspensionDistance { get; set; }
+        public float motorTorque { get; set; }
+        public float brakeTorque { get; set; }
+        public float steerAngle { get; set; }
+    }
+
     public static class Debug
     {
         public static void Log(object message) { Console.WriteLine(message); }
@@ -489,6 +531,11 @@ namespace UnityEngine
             return value;
         }
         public static float Clamp01(float value) { return Clamp(value, 0f, 1f); }
+        public static float Lerp(float a, float b, float t)
+        {
+            t = Clamp01(t);
+            return a + (b - a) * t;
+        }
         public static float Sin(float f) { return (float)Math.Sin(f); }
         public static float Cos(float f) { return (float)Math.Cos(f); }
         public static float Sqrt(float f) { return (float)Math.Sqrt(f); }

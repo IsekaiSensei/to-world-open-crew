@@ -28,6 +28,16 @@ namespace Gertech.Look
         public const string CyanEmissiveHex = "#35CAD8";
         // Median teal cluster across the set (REF_01 / REF_07 sphere accents).
         public const string TealHex = "#3A8D9F";
+        // REF_18 starship crystal interiors (also strong in REF_10).
+        public const string NebulaVioletHex = "#701AA9";
+        // REF_10 / REF_18 magenta nebula panels.
+        public const string NebulaMagentaHex = "#882DB4";
+        // Warm-orange gold glow on REF_18 / REF_19 energized edges.
+        public const string GoldGlowHex = "#DC7F03";
+        // Workshop Guide infinity-clip accent. Provisional: the turnaround
+        // sheet was not in the delivered batch-2 attachments, so this was
+        // not sampled from that sheet.
+        public const string InfinityBlueHex = "#3A7DFF";
 
         public static readonly Color SpaceBlack = Hex(SpaceBlackHex);
         public static readonly Color SpaceNavy = Hex(SpaceNavyHex);
@@ -37,6 +47,10 @@ namespace Gertech.Look
         public static readonly Color Chrome = Hex(ChromeHex);
         public static readonly Color CyanEmissive = Hex(CyanEmissiveHex);
         public static readonly Color Teal = Hex(TealHex);
+        public static readonly Color NebulaViolet = Hex(NebulaVioletHex);
+        public static readonly Color NebulaMagenta = Hex(NebulaMagentaHex);
+        public static readonly Color GoldGlow = Hex(GoldGlowHex);
+        public static readonly Color InfinityBlue = Hex(InfinityBlueHex);
 
         public static Color Hex(string value)
         {
@@ -69,6 +83,10 @@ namespace Gertech.Look
         [SerializeField] Color chrome = GertechLook.Chrome;
         [SerializeField] Color cyanEmissive = GertechLook.CyanEmissive;
         [SerializeField] Color teal = GertechLook.Teal;
+        [SerializeField] Color nebulaViolet = GertechLook.NebulaViolet;
+        [SerializeField] Color nebulaMagenta = GertechLook.NebulaMagenta;
+        [SerializeField] Color goldGlow = GertechLook.GoldGlow;
+        [SerializeField] Color infinityBlue = GertechLook.InfinityBlue;
 
         public Color SpaceBlack => spaceBlack;
         public Color SpaceNavy => spaceNavy;
@@ -78,6 +96,10 @@ namespace Gertech.Look
         public Color Chrome => chrome;
         public Color CyanEmissive => cyanEmissive;
         public Color Teal => teal;
+        public Color NebulaViolet => nebulaViolet;
+        public Color NebulaMagenta => nebulaMagenta;
+        public Color GoldGlow => goldGlow;
+        public Color InfinityBlue => infinityBlue;
 
         public void ResetToSampledDefaults()
         {
@@ -89,6 +111,10 @@ namespace Gertech.Look
             chrome = GertechLook.Chrome;
             cyanEmissive = GertechLook.CyanEmissive;
             teal = GertechLook.Teal;
+            nebulaViolet = GertechLook.NebulaViolet;
+            nebulaMagenta = GertechLook.NebulaMagenta;
+            goldGlow = GertechLook.GoldGlow;
+            infinityBlue = GertechLook.InfinityBlue;
         }
     }
 }

@@ -18,3 +18,19 @@ How the Unity hub uses each PNG. All of this is a look assist; it does not chang
 | 12 | 30-frame crystal seed → winged android sheet (6×5) | `GertechFlipbook` display |
 | 13 | 30-frame helix → Platonic-frame progression (6×5) | `GertechFlipbook` display |
 | 14 | Nebula triangle module with gold corner brackets and cyan bars | `TriangleModuleBuilder`; nebula crop reused in the crystal block |
+
+## Batch 2 (2026-11-14)
+
+Originals: `/workspace/gertech_shared_refs/visual_2026-11-14_batch2/` (see that folder's `INDEX.md`). Only 8 of the 24 images Ryan sent were in this executor's attachments; 3 were pixel-identical re-sends of REF_03 / REF_08 / REF_10. Unique new plates:
+
+| Ref | Subject | Unity use |
+|---|---|---|
+| 15 | Gold honeycomb / hex tiles, cyan edges, spiral into a black core | Backdrop / look plate |
+| 16 | Ornate gold / silver hex spiral into a black core, cyan edges | Backdrop / look plate |
+| 17 | Golden-spiral chains of gold spheres into a black hole | Backdrop / look plate |
+| 18 | Starship hull sheet (crystal-block hull, stages 7–8–9, orthos, interior gem pedestal, cyan ring engine) | Backdrop plate; informs `StarshipHull` + `DockingPort` stub |
+| 19 | Photo-style crystal-block car in front of a GERTECH building | Backdrop plate; informs `CrystalBlockVehicle` and palette (violet / magenta nebula, warm-orange gold glow) |
+| 10 (also in batch 2) | Modular Crystal Block infographic: seed → energized lattice → finished block; forms triangle module, machine cluster, car hull section, humanoid torso, starship hull section | `CrystalBlockGrid` / `ModularAssemblyPresets` (deduped gold edges and corner joints) plus the existing single-block builder |
+
+**Workshop Guide** (Ryan, 2026-11-14): the gold-dress character turnaround is the **player's guide**, not just a costume ref. Name her only **Workshop Guide** (no invented name). The sheet itself was not in the 8 delivered files; when it arrives, put it in `Assets/Art/Refs/characters/` as the visual target. Unity stand-in: `Gertech.Core.Guide.GuideCharacter` (gold / crystal-lattice capsule, blue infinity accent) with `GuideDialogue` onboarding that can follow or wait near the player and point to the Forge, TETRAFORGE, and the DNA wormhole helix portal.
+

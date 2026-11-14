@@ -17,24 +17,25 @@ Open this `unity/` folder (or `/workspace/gertech-unity` on the shared box) in *
    - `Assets/Data/Recipes/*.asset` — TETRAFORGE `CraftingRecipe` assets
    - `Assets/Data/GertechLookPalette.asset` — sampled gold / chrome / cyan / teal / space-black palette
    - `Assets/Art/Materials/` — URP Lit-compatible gold, chrome, cyan-edge, crystal-glass materials
-   - `Assets/Scenes/WorkshopHub.unity` — hub with stations, the DNA wormhole helix portal and visual, crystal block, triangle module, flipbooks, and reference plates
+   - `Assets/Scenes/WorkshopHub.unity` — hub with stations, the DNA wormhole helix portal and visual, crystal block, modular assemblies (car / torso / machine cluster / starship), Workshop Guide, flipbooks, and reference plates
 5. Open `Assets/Scenes/WorkshopHub.unity` if it is not already active, and press Play.
 
 The Editor scripts live at `Assets/Editor/EditorBootstrap.cs` and `Assets/Editor/GertechLookBootstrap.cs`. Materials target **URP Lit** property names (`_BaseColor`, `_Metallic`, `_Smoothness`, `_EmissionColor`, `_Surface`) and also set Built-in Standard names so the project can open before a URP package is added. A URP Lit shader is not pinned in `Packages/manifest.json`; install Universal RP in the Editor if you want the Lit path.
 
 ## Look pass (provisional)
 
-Reference PNGs are under `Assets/Art/Refs/` (see `Assets/Art/Refs/ORIGINALS.md` and `LOOK_MAP.md`). Originals are at `/workspace/gertech_shared_refs/visual_2026-11-14/`. Copies in the local project are downscaled (max 512 px, 256-color PNG). The `.png` blobs on GitHub were transcoded by the text file API and are not valid PNGs — restore them after a clone with `python3 tools/decode-art-refs.py` (see `Assets/Art/Refs/ORIGINALS.md` and `packed_512px_pngs.json`). Originals remain at full resolution on the shared box.
+Reference PNGs are under `Assets/Art/Refs/` (see `Assets/Art/Refs/ORIGINALS.md` and `LOOK_MAP.md`). Originals are at `/workspace/gertech_shared_refs/visual_2026-11-14/` (batch 1) and `/workspace/gertech_shared_refs/visual_2026-11-14_batch2/` (batch 2). Copies in the local project are downscaled (max 512 px, 256-color PNG). Do not push raw PNGs through the GitHub text file API (it UTF-8-transcodes them). Restore after a clone with `python3 tools/decode-art-refs.py` (see `Assets/Art/Refs/ORIGINALS.md` and `packed_512px_pngs.json`).
 
 Shared look: black space with star dust, polished gold and chrome, glowing cyan edges, gold Platonic frames, a DNA wormhole helix as a **torus of distortion with a helix inside**, fractal gold/silver/teal clusters, Voronoi lattices, and golden-spiral polyhedra chains. The PNGs are used directly as backdrop plates, floor decals, UI-style flipbook screens, and inner nebula textures.
 
-Palette hex (sampled from the refs): space black `#000000`, space navy `#0C192A` (REF_14), gold `#BF8F43` (REF_05), gold joint `#EF9E29` (REF_10), chrome `#BDC0BC` (REF_03), cyan emissive `#35CAD8` (REF_09), teal `#3A8D9F`.
+Palette hex (sampled from the refs): space black `#000000`, space navy `#0C192A` (REF_14), gold `#BF8F43` (REF_05), gold joint `#EF9E29` (REF_10), chrome `#BDC0BC` (REF_03), cyan emissive `#35CAD8` (REF_09), teal `#3A8D9F`, nebula violet `#701AA9` and nebula magenta `#882DB4` (REF_18 / REF_10 interiors), gold glow `#DC7F03` (warm-orange gold edges on REF_18 / REF_19), infinity blue `#3A7DFF` (Workshop Guide accent; provisional until the turnaround sheet is on disk).
 
 ## Layout
 
 ```text
 Assets/Scripts/Core/          Gertech.Core     WorkshopHub, StationRegistry, AutosaveOnQuit,
                                                DnaWormholeHelixPortal
+Assets/Scripts/Core/Guide/     Gertech.Core.Guide Workshop Guide character, dialogue, onboarding
 Assets/Scripts/Stations/      Gertech.Stations IStation, StationBase, StationDefinition,
                                                Forge, Assembly, coral growth vats, resin printer,
                                                3D printer, arc welder, lathe, quantum table
@@ -43,8 +44,9 @@ Assets/Scripts/Tetraforge/    Gertech.Tetraforge CraftingRecipe, TetraForgeStati
                                                TetrisForgeFoundry (Godot foundry mapping stub)
 Assets/Scripts/Look/          Gertech.Look     Palette, material factory, sky/backdrop plates,
                                                DNA wormhole helix visual, crystal block,
-                                               triangle module, flipbook, elemental row
-Assets/Art/Refs/              Downscaled GERTECH_REF_01..14 plus crops
+                                               triangle module, flipbook, elemental row,
+                                               crystal-block grid / vehicle / starship hull
+Assets/Art/Refs/              Downscaled GERTECH_REF_01..19, batch2/, characters/, crops
 Assets/Editor/                Scene / data / look bootstrap (Unity Editor only)
 Assets/Data/                  ScriptableObject output (after bootstrap)
 Packages/manifest.json        Built-in modules only
