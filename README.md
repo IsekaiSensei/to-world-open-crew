@@ -1,8 +1,10 @@
+An addition should preserve everything that exists and add new capabilities. It should never silently replace an established system with a simpler description of it
+
 # TO WORLD — UNIVERSAL GAME STANDARDS
 
 **Current build:** [GERTECH Aqua Workshop + Forge Loft](godot/GERTECH_Aqua_Workshop/) · [current build handoff and actual validation status](game/GODOT_CURRENT_BUILD_HANDOFF.md). Film production is selected by the [AI’s Got No Talent act router](https://docs.google.com/document/d/1JNQmXdWkaHTYkpcnsr7OC7lbLrGqf4OrsN-9QFQIcT4/edit).
 
-**Current film and casting** — [AI’s Got No Talent and the native act router](https://docs.google.com/document/d/1JNQmXdWkaHTYkpcnsr7OC7lbLrGqf4OrsN-9QFQIcT4/edit). [The Copy Episode](https://docs.google.com/document/d/1OC9NOWcvs0cJjqsSdE_ta0uavRy4i4IDCOKRTG8KYHU/edit) follows Cube’s quantum-table pilot. DataCenterLive broadcasts from the Moon Bar in The Man in the Pocket. Ryan Oceancrest Shakesaspear hosts. Ryan selects game roles from the performance Library. The native router records the owner’s act selection.
+**Series production** — [Series continuity master](https://docs.google.com/document/d/17cAA3tVQmbDiUUtUQ9p21yV6EBFfe0nZk0pCHxf0y1Y/edit) · [The Copy Episode screenplay](https://docs.google.com/document/d/1OC9NOWcvs0cJjqsSdE_ta0uavRy4i4IDCOKRTG8KYHU/edit) · [Batch 01, DARPA D001–D010](https://docs.google.com/document/d/1aIbHQksrFITBg4sY576qs9Mo5D77QuK-H99QSy47vtY/edit) · [Native film router and act catalog](https://docs.google.com/document/d/1JNQmXdWkaHTYkpcnsr7OC7lbLrGqf4OrsN-9QFQIcT4/edit). Cube’s quantum-table pilot plays first. The next episode returns to the DARPA accident. The Man in the Pocket connects the bench, bar, stage and game auditions. AI’s Got No Talent casts returning performers for films and GERTECH games.
 
 **October 30, 2026 — HISTORICAL STANDARDS RESET.**
 
