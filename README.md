@@ -1,6 +1,8 @@
 # TO WORLD — UNIVERSAL GAME STANDARDS
 
-**Current build:** [GERTECH Aqua Workshop + Forge Loft](godot/GERTECH_Aqua_Workshop/) · [current build handoff and actual validation status](game/GODOT_CURRENT_BUILD_HANDOFF.md). Film production is selected by the [native Pocket Workshop router](https://docs.google.com/document/d/1JNQmXdWkaHTYkpcnsr7OC7lbLrGqf4OrsN-9QFQIcT4/edit).
+**Current build:** [GERTECH Aqua Workshop + Forge Loft](godot/GERTECH_Aqua_Workshop/) · [current build handoff and actual validation status](game/GODOT_CURRENT_BUILD_HANDOFF.md). Film production is selected by the [AI’s Got No Talent act router](https://docs.google.com/document/d/1JNQmXdWkaHTYkpcnsr7OC7lbLrGqf4OrsN-9QFQIcT4/edit).
+
+**Current film and casting** — [AI’s Got No Talent and the native act router](https://docs.google.com/document/d/1JNQmXdWkaHTYkpcnsr7OC7lbLrGqf4OrsN-9QFQIcT4/edit). [The Copy Episode](https://docs.google.com/document/d/1OC9NOWcvs0cJjqsSdE_ta0uavRy4i4IDCOKRTG8KYHU/edit) follows Cube’s quantum-table pilot. DataCenterLive broadcasts from the Moon Bar in The Man in the Pocket. Ryan Oceancrest Shakesaspear hosts. Ryan selects game roles from the performance Library. The native router records the owner’s act selection.
 
 **October 30, 2026 — HISTORICAL STANDARDS RESET.**
 
