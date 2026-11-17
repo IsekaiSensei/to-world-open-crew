@@ -1,5 +1,9 @@
 An addition should preserve everything that exists and add new capabilities. It should never silently replace an established system with a simpler description of it
 
+## PRIORITY ZERO — PERSISTENT OBJECTIVE FOR NEW PROJECTS
+
+**[Read the full owner canon: READY MAKER ONE — The Living World Becomes Cinema](PROJECT_OBJECTIVE.md).** Build a modular, player-created, persistent MMORPG whose genuine raid-winning group determines the eventual film protagonist. Reconstruct that group's real journey back to its origin; use creator clips and authoritative game history as evidence; make a fully cinematic film/series rather than gameplay footage. Player accomplishments can become next month's official content; played-through characters persist as NPCs. Every new related project or bot handoff must state how it advances this objective while preserving existing source canon and the owner's current production routing.
+
 # TO WORLD — UNIVERSAL GAME STANDARDS
 
 **Current build:** [GERTECH Aqua Workshop + Forge Loft](godot/GERTECH_Aqua_Workshop/) · [current build handoff and actual validation status](game/GODOT_CURRENT_BUILD_HANDOFF.md). Film production is selected by the [AI’s Got No Talent act router](https://docs.google.com/document/d/1JNQmXdWkaHTYkpcnsr7OC7lbLrGqf4OrsN-9QFQIcT4/edit).
