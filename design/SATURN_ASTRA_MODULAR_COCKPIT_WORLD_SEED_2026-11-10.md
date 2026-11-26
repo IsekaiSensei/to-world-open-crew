@@ -33,3 +33,12 @@ When the owner requests a storyboard, use **static numbered comic panels**, incl
 - Reference images and short video demonstrations exist in the conversation. They have **not** been verified here as a complete public original-asset pack, trained LoRA, Godot runnable build, certified physics or owner-approved final game module.
 - Next engineering proof: exact car envelope and cockpit opening, rear-ramp clearance, load-bearing internal path, cradle/locks, modular ports, save/load and flight tests, all demonstrated on the Saturn first.
 - Leave game code and existing original art untouched until their specific owner-selected inputs and test targets are in scope.
+
+
+---
+
+## 26 NOVEMBER 2026 — OWNER CORRECTION: SCROLLS, NOT LORAs
+
+The earlier wording in this document that proposes a car-specific LoRA as a visual styling guide is superseded for this reference workflow by the owner's later clarification: the reusable visual references are **JPEG Scrolls**, not LoRAs or trained model weights. Use a car-specific Scroll sheet to carry the approved finish, paint, trim, silhouette, panel breaks, lights, glazing and interior character across rendering sandboxes. The GERTECH structural chassis, functions and ports remain separate from the visual treatment.
+
+A JPEG Scroll is a visual reference, not a guaranteed 3D mesh, collision body, docking joint, trained model or numeric geometry definition. See [GERTECH Scrolls and Art Direction](GERTECH_SCROLLS_AND_ART_DIRECTION_2026-11-26.md). This dated correction changes the reference terminology and workflow; it does not silently rewrite the older source passage or assert a new car asset exists.
