@@ -38,6 +38,10 @@ Art/video are maintained separately in Drive; these are game **data** and **stan
 - [Scrolls and Art Direction](design/GERTECH_SCROLLS_AND_ART_DIRECTION_2026-11-26.md) — JPEG Scroll reference system and renderer terminology.
 - [Revised GERTECH Game Task Register](game/GERTECH_GAME_TASK_REGISTER_2026-11-26.md) — active-build verification lane kept separate from design backlog.
 - [Orbital / Near-Dyson Design Backlog issue #16](https://github.com/IsekaiSensei/chat.work.open.ai/issues/16) — design-only tracking; no implementation assigned.
+
+**26 November — source recovery references (not new canon):**
+- [Mesh / Four Lenses / Spawner Recovery](recovery/TO_WORLD_MESH_FOUR_LENSES_SPAWNER_RECOVERY_2026-11-26.md) — owner-stated four lenses on one mesh; existing spawner function-change rule; SPAWER remains unconfirmed.
+- [Armature Castle / Tier 3 Robot Build Visual Recovery](recovery/TO_WORLD_ARMATURE_CASTLE_TIER3_VISUAL_RECOVERY_2026-11-26.md) — existing seven-stage castle growth, Tier 3 Site 19 dossier, illustrated Five States of Gold and scale callouts.
 - [Cross-agent World Layer Alignment Order](https://github.com/IsekaiSensei/chat.work.open.ai/blob/main/WORLD_LAYER_ALIGNMENT_ORDER_2026-11-26.md) — Meta, Grok/Grokbots and Gemini readpoints and scope boundaries.
 
 The current game remains Aqua Workshop + Forge Loft, with TETRAFORGE as the only playable minigame in the documented source baseline. The six other docks remain scenery. WorldSeed inventory ↔ universal shared backpack remains **UNRESOLVED**. Godot runtime remains unverified in the current handoff.
