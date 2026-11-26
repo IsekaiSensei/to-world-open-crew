@@ -118,3 +118,22 @@ Original inspected owner ZIP (9:54 a.m.):
 **VERIFIED:** Re-fetched each corrected public GDScript from GitHub. All four have exclusively tab indentation in operative code; code without leading whitespace byte-for-byte unchanged. Six additional game scripts were spot-checked; dedicated Foundry skin scripts use spaces consistently within themselves and need no conversion. **Not verified:** headless Godot import/run, complete syntax/typing after these first parser issues, or Steam Deck FPS.
 
 **IMPORTANT:** The existing full private Drive ZIP `GERTECH_Aqua_Workshop_Premium_Graphics_First_2026-11-11.zip` **was NOT modified by these GitHub changes**. The Steam Deck extraction remains old until only the 4 named .gd scripts are updated in-place or a future full tested release is produced. User says he deleted most older versions; do not ask for repeated old copies or delete the current working directory/saves. Preserve only the owner's current extracted project, patch these 4 source files into the same relative locations, and rerun until actual parser result is known. Avoid multiplying versioned ZIPs just to change indentation.
+
+
+---
+
+## 26 NOVEMBER 2026 — WORLD-LAYER ALIGNMENT ADDENDUM
+
+**Status:** Documentation/governance update only. No Godot source, scene, inventory, WorldSeed schema or save file changed in this update.
+
+- **Current game baseline remains unchanged:** GERTECH Aqua Workshop + Forge Loft. TETRAFORGE is the only playable 10×20 Tetris / Forge Foundry minigame in the recorded source baseline. Six other docks are scenery only.
+- WorldSeed 1.0 graph, local inventory and save/reset paths remain source-present in the Aqua Workshop record; **Godot engine/runtime remains untested** in the existing handoff environment.
+- Aqua Workshop remains **legacy source / save schema** relative to the distinct TO FAIRY World Seed direction. Do not merge or overwrite either source.
+- WorldSeed local inventory ↔ universal shared backpack remains **UNRESOLVED**. No duplicate ledger, inferred adapter, automatic merge or save migration is authorized.
+- Orbital transportation and Gate transportation are separate mechanisms. Orbital uses celestial mechanics and calculated transfers; Gate uses the GERTECH pocket-dimension connection system.
+- Orbital, Gate, Workshop and WorldSeed layers each govern their own mechanisms. An interface between layers does not collapse their rules.
+- Near-Dyson / Orbital Network, halo/Lissajous and manifold dynamics, directed aggregation, MICRO/MESO/MACRO and arcade-to-simulation mappings remain **DESIGN ONLY**.
+
+Canonical pages: [Orbital Network Design](../design/GERTECH_ORBITAL_NETWORK_DESIGN.md) · [World Layers Addendum](../canon/GERTECH_WORLD_LAYERS_ADDENDUM_2026-11-26.md) · [Game Task Register](GERTECH_GAME_TASK_REGISTER_2026-11-26.md) · [Scrolls / Art Direction](../design/GERTECH_SCROLLS_AND_ART_DIRECTION_2026-11-26.md).
+
+This addendum does not supersede earlier dated test receipts or represent new engine tests. It preserves all existing source and save boundaries.
