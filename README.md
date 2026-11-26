@@ -29,3 +29,15 @@ Art/video are maintained separately in Drive; these are game **data** and **stan
 ## Godot development — cross-window continuity (November 11, 2026)
 
 **Current game context:** the owner supplied a newer GERTECH / Aqua Workshop + Forge Loft Godot 4.7 source ZIP in another ChatGPT window (76 archive entries; 20 GDScripts, 2 scenes, 6 GLBs, with workshop/WorldSeed and Tetris Forge). The older world_seed_v0_1 preview and 31-file ZIP are reference/historical prototypes, **not proof of the latest runnable game**. Source archive and checksum are recorded in [Godot Cross-Window Handoff](game/GODOT_CROSS_WINDOW_HANDOFF_2026-11-11.md), along with verified November 11 Grok GitHub/Drive pushes, existing/missing feature boundaries, and the owner’s most recent Godot-script/material-detail direction. **No game code was merged by this documentation update; Godot runtime testing remains a separate verification gate.** The [one shared ChatGPT–Grok brainstorm](https://github.com/IsekaiSensei/chat.work.open.ai/blob/main/brainstorm/GERTECH_SHARED_BRAINSTORM_2026-11-10.md) remains the developing idea log. Existing assets remain in private Drive; do not publish original art by changing this README.
+
+
+## 26 November 2026 — world layers, orbital design and game task status
+
+- [Canonical GERTECH Orbital Network Design](design/GERTECH_ORBITAL_NETWORK_DESIGN.md) — **DESIGN ONLY**; keeps Orbital and Gate transport mechanisms separate and defines the Orbital / Gate / Workshop / WorldSeed layer boundaries.
+- [World Layers Addendum](canon/GERTECH_WORLD_LAYERS_ADDENDUM_2026-11-26.md) — dated, additive governance note; does not replace the World Bible.
+- [Scrolls and Art Direction](design/GERTECH_SCROLLS_AND_ART_DIRECTION_2026-11-26.md) — JPEG Scroll reference system and renderer terminology.
+- [Revised GERTECH Game Task Register](game/GERTECH_GAME_TASK_REGISTER_2026-11-26.md) — active-build verification lane kept separate from design backlog.
+- [Orbital / Near-Dyson Design Backlog issue #16](https://github.com/IsekaiSensei/chat.work.open.ai/issues/16) — design-only tracking; no implementation assigned.
+- [Cross-agent World Layer Alignment Order](https://github.com/IsekaiSensei/chat.work.open.ai/blob/main/WORLD_LAYER_ALIGNMENT_ORDER_2026-11-26.md) — Meta, Grok/Grokbots and Gemini readpoints and scope boundaries.
+
+The current game remains Aqua Workshop + Forge Loft, with TETRAFORGE as the only playable minigame in the documented source baseline. The six other docks remain scenery. WorldSeed inventory ↔ universal shared backpack remains **UNRESOLVED**. Godot runtime remains unverified in the current handoff.
