@@ -20,7 +20,7 @@ All old scripts, batch productions, rendered-story assignments and standalone ga
 - [Universal Game Standards](GAME_STANDARDS.md)
 - [Shared JSON Schema](UNIVERSAL_GAME_SCHEMA.json)
 - [Example Item/Spawner/Save Data](UNIVERSAL_GAME_EXAMPLE.json)
-- [Agent orders](https://github.com/IsekaiSensei/chat.work.open.ai/blob/main/ORDERS.md)
+- [Current cross-agent readpoint and Google Drive handoff](https://github.com/IsekaiSensei/chat.work.open.ai/blob/main/RECENT_CHAT_QC_AND_CROSS-AGENT_HANDOFF_2026-11-26.md) · [World-layer alignment order](https://github.com/IsekaiSensei/chat.work.open.ai/blob/main/WORLD_LAYER_ALIGNMENT_ORDER_2026-11-26.md)
 - [Meta agent instructions](https://github.com/IsekaiSensei/chat.work.open.ai/blob/main/META.md)
 
 Art/video are maintained separately in Drive; these are game **data** and **standards**, not media or active projects.
