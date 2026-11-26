@@ -72,12 +72,13 @@ A recovered production record further describes sorting mesh, cable, stone, plas
 
 **Implementation status:** historical / design record. This recovery does not claim a currently implemented spawner transformation in a live build.
 
-## SPAWER / SPAWNER spelling status
+## SPAWNER / Spawn Point — owner clarification
 
-- **SPAWNER** is the spelling found in the existing material.
-- The owner has said there is no record of deliberately writing **SPAWER** as wordplay and that it may be a transcription or typing slip.
-- The speculative PAW / WER / SPA interpretation appeared in assistant-generated discussion and is **not owner-approved**.
-- Do not add a SPAWER machine, alter the canonical spelling, or promote the proposed breakdown to canon unless the owner later confirms deliberate intent.
+**Owner clarification, 26 November 2026:** “SPAWER” was a transcription slip for **SPAWNER**. The intended term is **SPAWNER**. A **Spawn Point** is a **place of manifestations**.
+
+Do not preserve SPAWER as a separate term, machine, process or lore category. The speculative PAW / WER / SPA interpretation appeared in assistant-generated discussion and is rejected by this owner clarification; it is not part of the project record.
+
+The existing function-change rule remains: an unrepaired or broken spawn point spawns monsters; repair that same infrastructure and it becomes a Player Spawner. This is a change in the function of the same infrastructure, not the creation of a replacement object. Implementation status remains historical / design record unless separately verified in a live build.
 
 ## Quantum Table cross-reference
 
