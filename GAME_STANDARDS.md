@@ -44,3 +44,12 @@ Inventory, equipment references, quantities, all portable item definitions, game
 4. **Transitions/save-load:** verify one game's state survives entry to another and return, without item loss, restart or duplication.
 
 Note: JSON Schema validates structure, not every cross-reference. Runtime must additionally verify that IDs are unique, spawner and equipment references resolve, state belongs to correct game, and quantities never go negative. The example is **specification data**, not a completed game, executable runtime or proof of inter-game compatibility.
+
+
+---
+
+## 26 NOVEMBER 2026 — SPECIFICATION VS IMPLEMENTATION CLARIFICATION
+
+This document remains the **universal target specification** for compatible games. Its shared-backpack and persistence rules are not evidence that every current prototype has implemented them.
+
+For the documented GERTECH Aqua Workshop + Forge Loft source baseline, the local WorldSeed 1.0 inventory is present in the legacy Aqua Workshop source. Its integration with the universal portable shared backpack is **UNRESOLVED / NOT VERIFIED**. Do not claim that the cross-game adapter, shared transaction ledger, save migration or cross-project persistence is implemented. Do not create a second ledger or silently merge the local inventory into the universal backpack. Any future bridge requires an explicit versioned adapter and tested migration path, preserving existing saves and item state.
