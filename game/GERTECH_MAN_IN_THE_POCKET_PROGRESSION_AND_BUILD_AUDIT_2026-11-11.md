@@ -98,3 +98,21 @@ The real workshop should sound as purposeful as its machinery, not like an arcad
 - **Next actual runtime acceptance:** fresh import of newest complete ZIP into Godot 4.7, report debugger paths/lines; navigate workshop; run Tetris with ledger before/after; close and reload; verify F9 reset and saved backup; inspect imported meshes and Steam Deck FPS; inspect sound only after assets/audio logic are authored.
 
 **Related:** [Grokbots Breakout #13](https://github.com/IsekaiSensei/chat.work.open.ai/issues/13), [Bejeweled #14](https://github.com/IsekaiSensei/chat.work.open.ai/issues/14), [single shared brainstorm](https://github.com/IsekaiSensei/chat.work.open.ai/blob/main/brainstorm/GERTECH_SHARED_BRAINSTORM_2026-11-10.md). Document prepared as source-status clarification, not a claim of implemented features.
+
+
+---
+
+## 26 NOVEMBER 2026 — CURRENT TASK REGISTER CROSS-REFERENCE
+
+This 11 November audit remains a dated source-backed snapshot; it is not silently rewritten as a new runtime audit. Use the [GERTECH Game Task Register — 26 November 2026](GERTECH_GAME_TASK_REGISTER_2026-11-26.md) as the current concise task/status view.
+
+Controlling boundaries reaffirmed:
+- Aqua Workshop + Forge Loft remains the current documented game source context.
+- TETRAFORGE is the one playable 10×20 Tetris / Forge Foundry minigame; six other docks remain scenery-only.
+- Source presence does not prove Godot runtime behavior.
+- Aqua Workshop's existing source/save schema remains separate from the TO FAIRY World Seed direction.
+- WorldSeed inventory ↔ universal shared backpack remains **UNRESOLVED**.
+- Orbital vs Gate transportation remains two separate mechanisms.
+- Near-Dyson, orbital manifolds, directed aggregation, MICRO/MESO/MACRO and arcade-to-simulation mappings are **DESIGN ONLY**, not game tasks or implementation assignments.
+
+The new [Orbital / Near-Dyson design backlog issue #16](https://github.com/IsekaiSensei/chat.work.open.ai/issues/16) is explicitly design-only. Existing issues #12–#15 retain their original scopes; this addendum does not reassign, close or expand them.
