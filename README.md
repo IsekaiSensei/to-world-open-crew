@@ -1,5 +1,9 @@
 An addition should preserve everything that exists and add new capabilities. It should never silently replace an established system with a simpler description of it
 
+## SHARED PROJECT COMPASS — ALL AI AGENTS START HERE
+
+**[TO WORLD — Project Compass, READY MAKER ONE, Film / Series, and Cross-Platform MMORPG](PROJECT_COMPASS_AND_BUILD_PLAN_2026-11-26.md)** — shared orientation, source index, current build facts, and clearly labelled proposed build sequence. This page links rather than replaces the World Bible, dialogue, glossary, game standards, film router, or technical records.
+
 ## PRIORITY ZERO — PERSISTENT OBJECTIVE FOR NEW PROJECTS
 
 **[Read the full owner canon: READY MAKER ONE — The Living World Becomes Cinema](PROJECT_OBJECTIVE.md).** Build a modular, player-created, persistent MMORPG whose genuine raid-winning group determines the eventual film protagonist. Reconstruct that group's real journey back to its origin; use creator clips and authoritative game history as evidence; make a fully cinematic film/series rather than gameplay footage. Player accomplishments can become next month's official content; played-through characters persist as NPCs. Every new related project or bot handoff must state how it advances this objective while preserving existing source canon and the owner's current production routing.
