@@ -40,3 +40,20 @@ The source pixels and owner-approved correction outrank AI captions, filenames, 
 ## 6. Evidence labels
 
 Use separate states for SOURCE FOUND, PIXELS INSPECTED, SCROLL ASSEMBLED, MODEL/GEOMETRY PRESENT, RENDERED, QC REVIEWED, OWNER APPROVED and IMPLEMENTED. Do not compress them into a single "done" badge.
+
+
+## 7. Shared voxel world — cross-platform spatial language
+**Owner-stated direction · 27 November 2026.** Voxels are the shared spatial language for the cross-platform WorldSeed. TO FAIRY Spawners and Leylines belong to that shared voxel world and are encountered, seen and interacted with through the POV / third-person presentation system.
+
+The distinction for every art, design and engineering team:
+- **Shared seed:** the persistent world and its spatial facts. It must not fork into separate platform-specific worlds.
+- **Voxel:** a platform-independent spatial unit through which the shared world can be represented and interpreted. A voxel is not, by itself, the identity or complete behavior of the thing occupying it.
+- **Spawner / Leyline:** recognizable world infrastructure with its own identity, extent, connections, state and behavior. It may occupy or influence many voxels; do not reduce an entire Spawner or Leyline to one cell.
+- **POV / third-person system:** a presentation and interaction perspective over the shared seed. It renders and exposes the same underlying spatial facts; it does not define a separate world.
+- **Platform renderers:** may differ in camera, visual style, resolution, controls and interaction details while remaining aligned to the same shared spatial facts and persistent state.
+
+**Spatial hierarchy and implementation distinction:** Sparse Voxel Octrees (SVOs) are a candidate data structure for organizing sparse voxel space hierarchically, supporting spatial queries and different levels of detail. An SVO is not the WorldSeed itself, not the construction Lattice, and not a replacement for stable entity IDs, topology, save history or gameplay rules. Keep construction relationships (such as Vertex → Line → Face → Mesh and seed/cluster/structure growth) distinct from the spatial subdivision used to index occupied space. Connect them through stable references rather than treating their hierarchies as identical.
+
+**Art-direction consequence:** when depicting a Spawner, Leyline, room, structure or machine, show its relationship to the surrounding voxel world and preserve its recognizable identity across viewpoints and platform renderers. A change of camera or level of detail must not imply that the underlying object, its connections or its state has changed. Do not use voxel appearance alone as proof of collision, ports, physical connectivity, gameplay behavior or implementation.
+
+**Status discipline:** the shared voxel spatial language is OWNER-STATED direction. The SVO connection is a technical design proposal. Exact voxel scale, world partitioning, entity-to-voxel mapping, streaming, synchronization, renderer adapters and Godot implementation remain UNRESOLVED / engineering decisions. No SVO implementation or cross-platform runtime behavior is claimed by this art-direction entry.
