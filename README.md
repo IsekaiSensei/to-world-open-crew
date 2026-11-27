@@ -39,7 +39,7 @@ Art/video are maintained separately in Drive; these are game **data** and **stan
 
 - [Canonical GERTECH Orbital Network Design](design/GERTECH_ORBITAL_NETWORK_DESIGN.md) — **DESIGN ONLY**; keeps Orbital and Gate transport mechanisms separate and defines the Orbital / Gate / Workshop / WorldSeed layer boundaries.
 - [World Layers Addendum](canon/GERTECH_WORLD_LAYERS_ADDENDUM_2026-11-26.md) — dated, additive governance note; does not replace the World Bible.
-- [Scrolls and Art Direction](design/GERTECH_SCROLLS_AND_ART_DIRECTION_2026-11-26.md) — JPEG Scroll reference system and renderer terminology.
+- [Scrolls and Art Direction](design/GERTECH_SCROLLS_AND_ART_DIRECTION_2026-11-26.md) — JPEG Scroll reference system, renderer terminology, and the shared voxel language for cross-platform WorldSeed presentation (including TO FAIRY Spawners and Leylines).
 - [Revised GERTECH Game Task Register](game/GERTECH_GAME_TASK_REGISTER_2026-11-26.md) — active-build verification lane kept separate from design backlog.
 - [Orbital / Near-Dyson Design Backlog issue #16](https://github.com/IsekaiSensei/chat.work.open.ai/issues/16) — design-only tracking; no implementation assigned.
 
