@@ -63,3 +63,19 @@ Read next: [universal item standards](../GAME_STANDARDS.md); [universal schema](
 8. **Open design questions, not a request to implement:** Does each Players Backpacks object represent world admission, inventory equipment, spawn eligibility, or all three? Which Reset activates the cleanup team? What is collected and retained, and what is restored? Are fantasy and military types backpacks, loadouts, traded equipment, or all three? Preserve all as undecided.
 
 All these systems remain FUTURE DESIGN ONLY. Existing Aqua Workshop gameplay, inventory, Foundry and save/reset code stay untouched.
+
+
+## 7. Related project index — Backpack Forge
+
+**Backpack Forge** was named by the owner on 27 November 2026 as a separate project, beginning with the question of what makes an RPG character's default backpack, and therefore the character's existence, plausible.
+
+Its relationship to this item-family catalog is through portable item definitions, tools, supplies, fabrication, and the shared inventory standards. It is not a replacement for this catalog and does not automatically inherit unapproved recipes or item lists.
+
+Keep three concepts distinct:
+1. **Universal backpack:** the persistent software/data authority defined by [GAME_STANDARDS.md](../GAME_STANDARDS.md).
+2. **Players Backpacks:** the previously owner-stated future buildable item/equipment family described in Section 6, associated with making worlds ready to host Players.
+3. **Backpack Forge:** the separately named project for developing the backpack's role in making an RPG character's existence plausible.
+
+These may connect through compatible item definitions and manufacturing records, but they are not synonyms, duplicate inventories, or a reason to introduce a second stock ledger. Backpack Forge's exact physical systems, contents, crafting loops, and relationship to individual games remain open for its own project record.
+
+See the [Astrofarmers Union & Vessel Interconnection Index](ASTROFARMERS_UNION_AND_VESSEL_INTERCONNECTION_INDEX_2026-11-27.md) for the cross-project index and the explicit boundaries between connected and independent concepts.
