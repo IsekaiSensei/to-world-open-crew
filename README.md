@@ -49,3 +49,12 @@ Art/video are maintained separately in Drive; these are game **data** and **stan
 - [Cross-agent World Layer Alignment Order](https://github.com/IsekaiSensei/chat.work.open.ai/blob/main/WORLD_LAYER_ALIGNMENT_ORDER_2026-11-26.md) — Meta, Grok/Grokbots and Gemini readpoints and scope boundaries.
 
 The current game remains Aqua Workshop + Forge Loft, with TETRAFORGE as the only playable minigame in the documented source baseline. The six other docks remain scenery. WorldSeed inventory ↔ universal shared backpack remains **UNRESOLVED**. Godot runtime remains unverified in the current handoff.
+
+
+## 27 November 2026 — connected design index
+
+- [Astrofarmers Union & Vessel Interconnection Index](design/ASTROFARMERS_UNION_AND_VESSEL_INTERCONNECTION_INDEX_2026-11-27.md) — additive design index connecting the Dragon host/capital-ship concept, Behemoth Leviathan world-colony ship, Fairy Ship shuttle, starting crew and Gertrude extraction premise, Astrofarmers body plans and protection concepts. It keeps independent projects and unresolved relationships separately indexed.
+- [GERTECH Orbital Network Design](design/GERTECH_ORBITAL_NETWORK_DESIGN.md) — now cross-references the vessel architecture while preserving the distinction between Orbital, Gate, Workshop and WorldSeed mechanisms.
+- [Universal Item Families](design/GERTECH_UNIVERSAL_ITEM_FAMILIES_STONE_BRONZE_FANTASY_2026-11-11.md) — now indexes Backpack Forge as a separate project connected to portable item families and the universal backpack standard.
+
+**Status:** design/index only. These references do not claim current-game implementation, merge the TO FAIRY World Seed with the Fairy Ship, or collapse the Dragon, Leviathan and solar Dragon power-station concepts into one entity.
