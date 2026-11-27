@@ -118,3 +118,20 @@ See [current Godot handoff](../game/GODOT_CURRENT_BUILD_HANDOFF.md), [TO FAIRY W
 ## 10. Document control
 
 This is the sole active title for the orbital/network design lane: `design/GERTECH_ORBITAL_NETWORK_DESIGN.md`. Earlier conversational labels and temporary filenames are aliases or historical references, not competing masters. Update this page additively; preserve dated source records and never imply the design became active build without a verified implementation and explicit owner direction.
+
+
+## 11. Vessel / colony-ship architecture interface
+
+The orbital and Near-Dyson network design can support the vessel concepts indexed in [Astrofarmers Union & Vessel Interconnection](ASTROFARMERS_UNION_AND_VESSEL_INTERCONNECTION_INDEX_2026-11-27.md). This is a cross-reference, not a claim that these vessels or their mechanics are implemented.
+
+The connected design vocabulary currently distinguishes:
+- **Dragon:** capital-ship / host architecture, described as able to house other vessels or systems. Its exact relationship to the Leviathan remains open.
+- **Behemoth Leviathan:** world-colony ship and one of the player's starting assets.
+- **Fairy Ship:** shuttle in relation to the Leviathan, while giant relative to its own occupants and described as having a colony-ship scale or identity.
+- **Starting group:** Behemoth Leviathan, Fairy Ship, and crew; the opening objective involves extracting Gertrude from the Fairy Ship.
+
+The orbital layer can govern actual trajectories, rendezvous, transfer corridors, and station-keeping for these vessels. The Gate layer may provide a separately designed pocket connection. Workshop processes may fabricate and maintain components. WorldSeed may represent persistent vessels, rooms, crew, and docking state if a future schema is specified. **These are interfaces between layers, not interchangeable mechanisms.**
+
+The owner's “Voltroning” direction means components can connect into configurations selected for a particular game's needs while retaining their own identities and independent usefulness. Do not assume every vessel must merge into the Dragon, that the Dragon and Leviathan are the same ship, or that a capital-ship configuration is the only valid arrangement.
+
+The November 11 [solar Dragon handoff](../game/handoffs/TO_DOG_SOLAR_DRAGON_SHARED_MAP_WINDOW_2026-11-11.md) is related design history, but does not establish that its Dragon power-station imagery is the same entity or configuration as this capital-ship host concept.
